@@ -54,6 +54,7 @@ h2 { font-size: clamp(1.8rem, 4.6vw, 3rem); }
 .menu { display: none; gap: 28px; list-style: none; margin: 0; padding: 0; font-size: .9rem; }
 .menu a { white-space: nowrap; text-decoration: none; color: var(--texto-e2); transition: color .25s; }
 .menu a:hover { color: var(--branco); }
+.menu__tag { margin-left: 4px; padding: 2px 6px; border-radius: 4px; background: var(--grad-roxo); color: var(--branco); font-size: .66rem; letter-spacing: .04em; vertical-align: 1px; }
 .topo__acoes { display: flex; align-items: center; gap: 18px; }
 .topo__suporte { display: none; text-align: right; line-height: 1.25; text-decoration: none; }
 .topo__suporte span { display: block; color: var(--texto-e2); font-size: .66rem; }
@@ -382,7 +383,7 @@ form.enviado .form__ok { display: block; }
 .menu-movel .btn { margin-top: 18px; }
 .topo__cta { display: none; }
 @media (min-width: 640px) { .topo__cta { display: inline-flex; } }
-@media (min-width: 1180px) { .menu { display: flex; gap: 24px; } .topo__suporte { display: block; } .menu-btn, .menu-movel { display: none !important; } }
+@media (min-width: 1180px) { .menu { display: flex; gap: 18px; font-size: .86rem; } .topo__suporte { display: block; } .menu-btn, .menu-movel { display: none !important; } }
 @media (prefers-reduced-motion: no-preference) {
   .sobe { opacity: 0; transform: translateY(18px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
   .sobe.visivel { opacity: 1; transform: none; }
@@ -511,6 +512,7 @@ form.enviado .form__ok { display: block; }
     <ul class="menu" aria-label="Principal">
       <li><a href="quem-somos.html">Quem somos</a></li>
       <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="suporte-protheus.html">Sustentação <span class="menu__tag mono">N1 · N2</span></a></li>
       <li><a href="atualizacao-protheus.html">Atualização</a></li>
       <li><a href="reforma-tributaria-protheus.html">Reforma tributária</a></li>
       <li><a href="consultoria-homologada-totvs.html">Canal homologado</a></li>
@@ -529,7 +531,7 @@ form.enviado .form__ok { display: block; }
       <a href="servicos.html">Todos os serviços</a>
       <a href="consultoria-totvs-protheus.html">Consultoria TOTVS Protheus</a>
       <a href="implantacao-protheus.html">Implantação</a>
-      <a href="suporte-protheus.html">Suporte e sustentação</a>
+      <a href="suporte-protheus.html">Sustentação: suporte N1 e N2</a>
       <a href="atualizacao-protheus.html">Atualização do Protheus</a>
       <a href="reforma-tributaria-protheus.html">Reforma tributária</a>
       <a href="consultoria-homologada-totvs.html">Canal homologado TOTVS</a>
@@ -607,7 +609,7 @@ form.enviado .form__ok { display: block; }
     <div class="solucoes">
       <a class="solucao sobe" style="--i:0" href="treinamento-protheus.html"><span class="mono">01</span><b>Treinamento</b><span>Cursos da Universidade TOTVS e turmas montadas com os processos da sua empresa, por módulo e por perfil de usuário..</span></a>
       <a class="solucao sobe" style="--i:1" href="projeto-horas-fechadas.html"><span class="mono">02</span><b>Projetos com horas fechadas</b><span>Para quem precisa de uma entrega específica: o escopo é definido, as horas são fechadas e o valor total é conhecido antes do início..</span></a>
-      <a class="solucao sobe" style="--i:2" href="suporte-protheus.html"><span class="mono">03</span><b>Suporte e sustentação</b><span>Sustentação com nível de serviço garantido, banco de horas AMS e um relatório mensal que mostra por que os chamados acontecem e o que foi feito para não voltarem..</span></a>
+      <a class="solucao sobe" style="--i:2" href="suporte-protheus.html"><span class="mono">03</span><b>Sustentação N1 e N2</b><span>Sustentação com nível de serviço garantido, banco de horas AMS e um relatório mensal que mostra por que os chamados acontecem e o que foi feito para não voltarem..</span></a>
     </div>
   </div>
 </section>
@@ -668,7 +670,7 @@ form.enviado .form__ok { display: block; }
       <div><h4 class="mono">Serviços</h4><ul>
         <li><a href="consultoria-totvs-protheus.html">Consultoria TOTVS Protheus</a></li>
         <li><a href="implantacao-protheus.html">Implantação</a></li>
-        <li><a href="suporte-protheus.html">Suporte e sustentação</a></li>
+        <li><a href="suporte-protheus.html">Sustentação N1 e N2</a></li>
         <li><a href="atualizacao-protheus.html">Atualização do Protheus</a></li>
         <li><a href="reforma-tributaria-protheus.html">Reforma tributária</a></li>
         <li><a href="desenvolvimento-advpl.html">Desenvolvimento ADVPL</a></li>

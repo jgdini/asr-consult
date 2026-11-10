@@ -167,15 +167,21 @@ ${lista(['Levantamento dos processos de cada área antes de configurar', 'Cronog
 
 // ───────────────────────── SUPORTE
 {
-  slug: 'suporte-protheus', menu: 'Suporte e sustentação', servico: 'Suporte e sustentação TOTVS Protheus (AMS)',
-  titulo: 'Suporte Protheus e sustentação AMS com SLA em contrato | ASR Consult',
-  descricao: 'Suporte TOTVS Protheus com SLA mínimo de 85% garantido em contrato, banco de horas AMS e Book de Atendimento mensal. +35 mil atendimentos por ano.',
-  olho: 'Suporte e sustentação',
-  h1: 'Suporte Protheus com <em>SLA de 85% no contrato.</em>',
+  slug: 'suporte-protheus', menu: 'Sustentação N1 e N2', servico: 'Sustentação TOTVS Protheus: suporte N1 e N2 (AMS)',
+  titulo: 'Sustentação Protheus: suporte N1 e N2 com SLA em contrato | ASR Consult',
+  descricao: 'Sustentação TOTVS Protheus com suporte N1 e N2, SLA mínimo de 85% garantido em contrato, banco de horas AMS e Book de Atendimento mensal. +35 mil atendimentos por ano.',
+  olho: 'Sustentação · suporte N1 e N2',
+  h1: 'Sustentação Protheus: suporte N1 e N2 <em>com SLA de 85% no contrato.</em>',
   apoio: 'Sustentação com nível de serviço garantido, banco de horas AMS e um relatório mensal que mostra por que os chamados acontecem e o que foi feito para não voltarem.',
-  fatos: [['SLA mínimo', '85% em contrato'], ['Atendimentos', '+35 mil por ano'], ['Relatório', 'Book de Atendimento mensal'], ['Plantão', '24/7 em fins de semana e feriados']],
+  fatos: [['Níveis', 'Suporte N1 e N2'], ['SLA mínimo', '85% em contrato'], ['Atendimentos', '+35 mil por ano'], ['Relatório', 'Book de Atendimento mensal'], ['Plantão', '24/7 em fins de semana e feriados']],
   blocos: [
     { tipo: 'numeros', itens: [['85', '', 'SLA mínimo garantido (%)'], ['35000', '+', 'Atendimentos por ano'], ['40', '+', 'Consultores sêniores'], ['12', '', 'Books de Atendimento por ano']] },
+    { tipo: 'cards', olho: 'Níveis de atendimento', titulo: 'O que é N1 e o que é N2.', intro: 'A sustentação da ASR cobre os dois primeiros níveis de suporte do Protheus. Quando o problema é do produto, o caso segue para a TOTVS pelo canal homologado.',
+      itens: [
+        ['N1: primeiro atendimento', 'Dúvidas de uso, orientação passo a passo, acessos e erros operacionais. É o nível que resolve o dia a dia do usuário e alimenta o plano de treinamento.'],
+        ['N2: análise técnica e funcional', 'Erros de rotina, parametrização, cadastros, integrações e cálculos que não fecham. Um consultor sênior do módulo investiga a causa e corrige.'],
+        ['Escalonamento para a TOTVS', 'Quando a falha é do produto, a ASR abre o caso nos canais técnicos da TOTVS e acompanha até a solução.'],
+      ] },
     { tipo: 'texto', olho: 'SLA de sustentação', titulo: 'O nível de serviço fica escrito no contrato.',
       html: `<p>Na sustentação da ASR, o SLA mínimo de 85% está no contrato. Em qualquer volume de chamados, a ASR mantém o índice acima desse patamar em todos os meses do ano.</p>
 <p>O cliente ganha previsibilidade: menos retrabalho, menos custo com correção e operação estável. O atendimento é feito por consultores sêniores que conhecem o ambiente, em horário comercial, com plantão 24/7 em fins de semana e feriados.</p>
@@ -205,6 +211,7 @@ ${lista(['Suporte N1 e N2 em todos os módulos TOTVS', 'Atendimento por consulto
   </div>
 </section>` },
     { tipo: 'faq', itens: [
+      ['Qual a diferença entre suporte N1 e N2?', 'O N1 é o primeiro atendimento: dúvidas de uso, orientação e erros operacionais. O N2 é a análise técnica e funcional: parametrização, cadastros, integrações e erros de rotina, tratados por um consultor sênior do módulo.'],
       ['O que é AMS no Protheus?', 'AMS (Application Management Services) é a gestão contínua da aplicação: suporte, correções, pequenas melhorias e manutenção. Na ASR, o AMS funciona como banco de horas usado conforme a demanda.'],
       ['O que o SLA de 85% garante?', 'Que pelo menos 85% dos chamados sejam atendidos dentro dos prazos combinados, todos os meses. O índice está no contrato e aparece no Book de Atendimento.'],
       ['A ASR atende fora do horário comercial?', 'Sim. Além do horário comercial de segunda a sexta, há plantão 24/7 em fins de semana e feriados.'],
