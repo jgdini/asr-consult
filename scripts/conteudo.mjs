@@ -2,8 +2,9 @@
 // e a pesquisa de buscas do Halo Intelligence Snapshot (trama/analise/asrconsult/mercado.json).
 // Trechos marcados com <mark class="confirmar"> esperam dados do Rodrigo.
 
-const ok = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
-export const lista = itens => `<ul class="lista-ok">${itens.map(i => `<li>${ok}<span>${i}</span></li>`).join('')}</ul>`;
+import { lista } from './conteudo-util.mjs';
+import { novas } from './conteudo-novas.mjs';
+export { lista };
 const conf = t => `<mark class="confirmar" title="Dado a confirmar com o Rodrigo">${t}</mark>`;
 
 export const paginas = [
@@ -19,7 +20,7 @@ export const paginas = [
   blocos: [
     { tipo: 'numeros', itens: [['480', '+', 'Projetos entregues desde 2008'], ['35000', '+', 'Atendimentos por ano'], ['40', '+', 'Consultores sêniores'], ['11', '', 'Estados atendidos']] },
     { tipo: 'texto', olho: 'Nossa história', titulo: 'Uma consultoria criada para cuidar do ERP depois que ele entra no ar.',
-      html: `<p>A ASR começou em 2008 implantando TOTVS Protheus e, com os anos, passou a cuidar do que vem depois da implantação: o suporte do dia a dia, as atualizações de release, as mudanças da legislação e o desenvolvimento do que o sistema padrão não cobre.</p>
+      html: `<p>Fundada por Rodrigo Silvestre e pela sócia Andreia, a ASR começou em 2008 implantando TOTVS Protheus e, com os anos, passou a cuidar do que vem depois da implantação: o suporte do dia a dia, as atualizações de release, as mudanças da legislação e o desenvolvimento do que o sistema padrão não cobre.</p>
 <p>Hoje a ASR atende indústrias, distribuidores, redes de varejo e empresas de serviço em 11 estados. A equipe tem mais de 40 consultores, todos sêniores, com especialistas em cada módulo do Protheus e do RM.</p>
 <p>O modelo de trabalho tem três compromissos que o cliente consegue conferir: o SLA de sustentação escrito em contrato, com mínimo de 85% todo mês; o Book de Atendimento, um relatório mensal com as causas dos chamados e os planos de ação; e a documentação no padrão TOTVS em toda entrega.</p>`,
       lado: `<h3>Cases em números</h3><dl class="fatos-lista"><div><dt>Projetos para a Bauminas em 2024</dt><dd>+108</dd></div><div><dt>Lojas do Habib's migradas</dt><dd>+270</dd></div><div><dt>Anos de parceria com a Procisa</dt><dd>8</dd></div></dl><a class="btn btn--ciano" href="#cases">Ver os cases</a>` },
@@ -32,16 +33,20 @@ export const paginas = [
     <div>
       <span class="olho mono">Quem lidera</span>
       <h2 id="t-rodrigo" class="palavras" style="margin-top:14px">Rodrigo Silvestre</h2>
-      <p class="pessoa__cargo mono">${conf('Cargo na ASR')} · ASR Consult</p>
-      <p>Rodrigo Silvestre está à frente da ASR Consult e tem ${conf('XX anos')} de carreira em tecnologia da informação. Antes de liderar a consultoria, foi coordenador de ${conf('área')} em empresas como ${conf('empresas')} e gerente de projetos de ${conf('tipo de projeto, ex.: implantação de ERP')}.</p>
-      <p>É dessa experiência do lado de quem usa o sistema que vem o jeito de trabalhar da ASR: prazo e escopo combinados antes, nível de serviço no contrato e relatório mensal para a diretoria saber o que aconteceu com o ERP.</p>
+      <p class="pessoa__cargo mono">Diretor executivo e sócio-fundador · ASR Consult</p>
+      <p>Rodrigo Miranda Silvestre fundou a ASR Consult com a sócia Andreia e tem mais de 20 anos de carreira em tecnologia. Antes da ASR, foi líder de equipe, coordenador de TI e líder de suporte VIP em operações de grande porte, sempre com SLA de cliente para cumprir.</p>
+      <p>Na carreira, trabalhou com empresas como Itaú Unibanco, Pernambucanas, Sodexo, TOTVS e Mr. Kitch. Na coordenação de TI da Sonda, atendendo a Pernambucanas em todo o país, recuperou o SLA em 42% no primeiro mês com a nova equipe de campo e manteve 99% de atingimento mensal.</p>
+      <p>Hoje, como diretor executivo, cuida da estratégia comercial, da relação direta com os clientes e da gestão das equipes de suporte e projetos. O SLA no contrato e o Book de Atendimento da ASR vêm dessa experiência: ele passou anos sendo cobrado por indicador.</p>
+      <ul class="clientes clientes--escuro" aria-label="Empresas na carreira do Rodrigo"><li>Itaú Unibanco</li><li>Pernambucanas</li><li>Sodexo</li><li>TOTVS</li><li>Mr. Kitch</li></ul>
       <ul class="trajetoria">
-        <li><b class="mono">${conf('Ano')}</b><span>Início da carreira em TI, em ${conf('empresa/área')}.</span></li>
-        <li><b class="mono">${conf('Ano')}</b><span>Coordenador de ${conf('área')} em ${conf('empresa')}.</span></li>
-        <li><b class="mono">${conf('Ano')}</b><span>Gerente de projetos em ${conf('empresa')}.</span></li>
-        <li><b class="mono">2008</b><span>Fundação da ASR Consult${conf(' (confirmar se é fundador ou sócio)')}.</span></li>
+        <li><b class="mono">2010</b><span>Líder de equipe de suporte a campo na Spread Tecnologia, atendendo o Itaú Unibanco.</span></li>
+        <li><b class="mono">2011</b><span>Analista de suporte na Itautec, no cliente Itaú Unibanco.</span></li>
+        <li><b class="mono">2012</b><span>Coordenador de TI na Spread Tecnologia: field services e service desk para Itaú Unibanco e CVC.</span></li>
+        <li><b class="mono">2015</b><span>Líder de suporte VIP na Globalweb, atendendo a diretoria da Suzano Papel e Celulose.</span></li>
+        <li><b class="mono">2016</b><span>Coordenador de TI na Sonda, responsável pela operação da Pernambucanas em nível nacional.</span></li>
+        <li><b class="mono">Hoje</b><span>Diretor executivo da ASR Consult, à frente da estratégia comercial, das finanças e das equipes de suporte e projetos.</span></li>
       </ul>
-      <p class="pessoa__contato"><a class="btn btn--linha" href="https://www.linkedin.com/company/asrconsult" target="_blank" rel="noopener">LinkedIn da ASR</a> <a class="btn btn--ciano" href="#contato">Falar com o Rodrigo</a></p>
+      <p class="pessoa__contato"><a class="btn btn--linha" href="https://www.linkedin.com/in/rodrigo-miranda-silvestre/" target="_blank" rel="noopener">LinkedIn do Rodrigo</a> <a class="btn btn--ciano" href="#contato">Falar com o Rodrigo</a></p>
     </div>
   </div>
 </section>` },
@@ -74,6 +79,7 @@ export const paginas = [
   </div>
 </section>` },
     { tipo: 'faq', itens: [
+      ['Quem fundou a ASR Consult?', 'A ASR foi fundada por Rodrigo Miranda Silvestre, hoje diretor executivo, e pela sócia Andreia. Rodrigo tem mais de 20 anos de carreira em tecnologia, com passagens pela coordenação de TI em operações de clientes como Itaú Unibanco e Pernambucanas.'],
       ['A ASR Consult é parceira oficial da TOTVS?', 'Sim. A ASR é canal homologado TOTVS desde 2008, o que permite implantar, dar suporte e treinar equipes nos sistemas da TOTVS com a metodologia e os treinamentos oficiais da fabricante.'],
       ['Onde fica a ASR e quais regiões ela atende?', 'A sede fica na Rua da Mooca, 4415, em São Paulo (SP). A ASR atende clientes em 11 estados, com atendimento remoto e visitas quando o projeto pede.'],
       ['Quais sistemas TOTVS a ASR atende?', 'Protheus e RM, em todos os módulos: recursos humanos, fiscal e financeiro, contabilidade, compras, estoque e custos, qualidade, exportação e importação, GFE, WMS e TMS.'],
@@ -471,17 +477,17 @@ ${lista(['Implantação de módulos: eSocial, App Meu RH, ACD, NFS-e, REINF, WMS
     { tipo: 'html', html: `<section class="secao claro" aria-labelledby="t-modelos" style="padding-top:0">
   <div class="wrap">
     <div class="secao__cabeca">
-      <div><span class="olho mono">Comparação</span><h2 id="t-modelos" class="palavras" style="margin-top:14px">Horas fechadas, banco de horas ou sustentação.</h2></div>
-      <p>Os três modelos de contratação da ASR, lado a lado.</p>
+      <div><span class="olho mono">Comparação</span><h2 id="t-modelos" class="palavras" style="margin-top:14px">Os quatro jeitos de contratar a ASR.</h2></div>
+      <p>Horas fechadas, banco de horas, sustentação e <a href="suporte-sob-demanda.html" style="color:var(--roxo-escuro);font-weight:600">sob demanda</a>, lado a lado.</p>
     </div>
     <div class="tabela-caixa">
       <table class="tabela">
-        <thead><tr><th scope="col"></th><th scope="col">Horas fechadas</th><th scope="col">Banco de horas (AMS)</th><th scope="col">Sustentação</th></tr></thead>
+        <thead><tr><th scope="col"></th><th scope="col">Horas fechadas</th><th scope="col">Banco de horas (AMS)</th><th scope="col">Sustentação</th><th scope="col">Sob demanda</th></tr></thead>
         <tbody>
-          <tr><th scope="row">Para quê</th><td>Uma entrega específica</td><td>Demandas variadas ao longo do mês</td><td>Suporte contínuo da operação</td></tr>
-          <tr><th scope="row">Valor</th><td>Fechado antes do início</td><td>Pacote de horas</td><td>Mensal</td></tr>
-          <tr><th scope="row">Prazo</th><td>Cronograma do projeto</td><td>Conforme a demanda</td><td>SLA mínimo de 85% em contrato</td></tr>
-          <tr><th scope="row">Relatório</th><td>Documentação da entrega</td><td>Consumo de horas</td><td>Book de Atendimento mensal</td></tr>
+          <tr><th scope="row">Para quê</th><td>Uma entrega específica</td><td>Demandas variadas ao longo do mês</td><td>Suporte contínuo da operação</td><td>Chamados avulsos</td></tr>
+          <tr><th scope="row">Valor</th><td>Fechado antes do início</td><td>Pacote de horas</td><td>Mensal</td><td>Pelas horas usadas</td></tr>
+          <tr><th scope="row">Prazo</th><td>Cronograma do projeto</td><td>Conforme a demanda</td><td>SLA mínimo de 85% em contrato</td><td>Sem contrato longo</td></tr>
+          <tr><th scope="row">Relatório</th><td>Documentação da entrega</td><td>Consumo de horas</td><td>Book de Atendimento mensal</td><td>Registro de cada atendimento</td></tr>
         </tbody>
       </table>
     </div>
@@ -494,6 +500,7 @@ ${lista(['Implantação de módulos: eSocial, App Meu RH, ACD, NFS-e, REINF, WMS
   ],
   relacionados: ['implantacao-protheus', 'suporte-protheus', 'desenvolvimento-advpl'],
 },
+...novas,
 ];
 
 // Página-índice de serviços

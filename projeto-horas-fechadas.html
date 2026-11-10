@@ -463,6 +463,8 @@ form.enviado .form__ok { display: block; }
 .case p { margin: 10px 0 0; color: var(--tinta-2); font-size: .93rem; }
 .clientes__titulo { margin: 56px 0 18px; font-size: 1.2rem; }
 .clientes { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.clientes--escuro { margin: 22px 0 6px; }
+.clientes.clientes--escuro li { background: rgba(16,40,92,.5); border-color: var(--linha-e2); color: var(--texto-e); }
 .clientes li { padding: 8px 14px; border-radius: 999px; background: var(--branco); border: 1px solid var(--linha-c); font-size: .9rem; font-weight: 500; }
 .book { display: grid; gap: 40px; align-items: center; }
 .book p { max-width: 54ch; color: var(--texto-e2); }
@@ -478,7 +480,7 @@ form.enviado .form__ok { display: block; }
 .calendario b { display: block; margin-bottom: 10px; font-family: "Plex Mono", monospace; font-weight: 500; font-size: 1.3rem; color: var(--ciano); }
 .calendario span { color: var(--texto-e2); }
 .tabela-caixa { overflow-x: auto; border: 1px solid var(--linha-c); border-radius: 14px; background: var(--branco); }
-.tabela { width: 100%; min-width: 640px; border-collapse: collapse; }
+.tabela { width: 100%; min-width: 760px; border-collapse: collapse; }
 .tabela th, .tabela td { padding: 16px 18px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--linha-c); font-size: .95rem; }
 .tabela thead th { background: var(--n900); color: var(--branco); font-weight: 600; }
 .tabela tbody th { font-family: "Plex Mono", monospace; font-weight: 500; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--roxo-escuro); }
@@ -530,6 +532,7 @@ form.enviado .form__ok { display: block; }
       <a href="atualizacao-protheus.html">Atualização do Protheus</a>
       <a href="reforma-tributaria-protheus.html">Reforma tributária</a>
       <a href="consultoria-homologada-totvs.html">Canal homologado TOTVS</a>
+      <a href="consultoria-ia-protheus.html">Consultoria de IA</a>
       <a class="btn btn--ciano" href="#contato">Falar com especialista</a>
     </div>
   </nav>
@@ -568,17 +571,17 @@ form.enviado .form__ok { display: block; }
 <section class="secao claro" aria-labelledby="t-modelos" style="padding-top:0">
   <div class="wrap">
     <div class="secao__cabeca">
-      <div><span class="olho mono">Comparação</span><h2 id="t-modelos" class="palavras" style="margin-top:14px">Horas fechadas, banco de horas ou sustentação.</h2></div>
-      <p>Os três modelos de contratação da ASR, lado a lado.</p>
+      <div><span class="olho mono">Comparação</span><h2 id="t-modelos" class="palavras" style="margin-top:14px">Os quatro jeitos de contratar a ASR.</h2></div>
+      <p>Horas fechadas, banco de horas, sustentação e <a href="suporte-sob-demanda.html" style="color:var(--roxo-escuro);font-weight:600">sob demanda</a>, lado a lado.</p>
     </div>
     <div class="tabela-caixa">
       <table class="tabela">
-        <thead><tr><th scope="col"></th><th scope="col">Horas fechadas</th><th scope="col">Banco de horas (AMS)</th><th scope="col">Sustentação</th></tr></thead>
+        <thead><tr><th scope="col"></th><th scope="col">Horas fechadas</th><th scope="col">Banco de horas (AMS)</th><th scope="col">Sustentação</th><th scope="col">Sob demanda</th></tr></thead>
         <tbody>
-          <tr><th scope="row">Para quê</th><td>Uma entrega específica</td><td>Demandas variadas ao longo do mês</td><td>Suporte contínuo da operação</td></tr>
-          <tr><th scope="row">Valor</th><td>Fechado antes do início</td><td>Pacote de horas</td><td>Mensal</td></tr>
-          <tr><th scope="row">Prazo</th><td>Cronograma do projeto</td><td>Conforme a demanda</td><td>SLA mínimo de 85% em contrato</td></tr>
-          <tr><th scope="row">Relatório</th><td>Documentação da entrega</td><td>Consumo de horas</td><td>Book de Atendimento mensal</td></tr>
+          <tr><th scope="row">Para quê</th><td>Uma entrega específica</td><td>Demandas variadas ao longo do mês</td><td>Suporte contínuo da operação</td><td>Chamados avulsos</td></tr>
+          <tr><th scope="row">Valor</th><td>Fechado antes do início</td><td>Pacote de horas</td><td>Mensal</td><td>Pelas horas usadas</td></tr>
+          <tr><th scope="row">Prazo</th><td>Cronograma do projeto</td><td>Conforme a demanda</td><td>SLA mínimo de 85% em contrato</td><td>Sem contrato longo</td></tr>
+          <tr><th scope="row">Relatório</th><td>Documentação da entrega</td><td>Consumo de horas</td><td>Book de Atendimento mensal</td><td>Registro de cada atendimento</td></tr>
         </tbody>
       </table>
     </div>
@@ -673,6 +676,10 @@ form.enviado .form__ok { display: block; }
         <li><a href="power-bi-protheus.html">Power BI</a></li>
         <li><a href="treinamento-protheus.html">Treinamento</a></li>
         <li><a href="projeto-horas-fechadas.html">Projetos com horas fechadas</a></li>
+        <li><a href="suporte-sob-demanda.html">Suporte sob demanda</a></li>
+        <li><a href="alocacao-profissionais-totvs.html">Alocação de profissionais</a></li>
+        <li><a href="bpo-protheus.html">BPO</a></li>
+        <li><a href="consultoria-ia-protheus.html">Consultoria de IA</a></li>
       </ul></div>
       <div><h4 class="mono">A ASR</h4><ul><li><a href="quem-somos.html">Quem somos</a></li><li><a href="consultoria-homologada-totvs.html">Canal homologado TOTVS</a></li><li><a href="servicos.html">Todos os serviços</a></li></ul><h4 class="mono" style="margin-top:22px">Atendimento</h4><p>Segunda a sexta, das 8h às 18h<br>Fins de semana e feriados: suporte 24/7</p></div>
       <div><h4 class="mono">Contato</h4><ul><li><a href="tel:+5511979967825">Comercial (11) 97996-7825</a></li><li><a href="tel:+551126595360">Suporte (11) 2659-5360</a></li><li>Rua da Mooca, 4415<br>São Paulo, SP · 03165-003</li></ul></div>
