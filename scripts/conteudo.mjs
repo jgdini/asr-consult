@@ -27,24 +27,25 @@ export const paginas = [
     { tipo: 'html', html: `<section class="secao escuro" id="rodrigo" aria-labelledby="t-rodrigo">
   <div class="wrap pessoa">
     <figure class="pessoa__foto">
-      <div class="pessoa__iniciais" aria-hidden="true">RS</div>
-      <figcaption class="mono">${conf('Foto do Rodrigo')}</figcaption>
+      <img src="assets/img/rodrigo-silvestre-720.webp" srcset="assets/img/rodrigo-silvestre-420.webp 420w, assets/img/rodrigo-silvestre-720.webp 720w" sizes="(min-width: 1000px) 420px, 92vw" width="720" height="900" alt="Rodrigo Silvestre, diretor executivo e sócio-fundador da ASR Consult" loading="lazy" decoding="async">
+      <figcaption class="mono">Rodrigo Silvestre · ASR Consult</figcaption>
     </figure>
     <div>
       <span class="olho mono">Quem lidera</span>
       <h2 id="t-rodrigo" class="palavras" style="margin-top:14px">Rodrigo Silvestre</h2>
       <p class="pessoa__cargo mono">Diretor executivo e sócio-fundador · ASR Consult</p>
-      <p>Rodrigo Miranda Silvestre fundou a ASR Consult com a sócia Andreia e tem mais de 20 anos de carreira em tecnologia. Antes da ASR, foi líder de equipe, coordenador de TI e líder de suporte VIP em operações de grande porte, sempre com SLA de cliente para cumprir.</p>
+      <p>Rodrigo Miranda Silvestre fundou a ASR Consult em 2008 com a sócia Andreia e tem mais de 20 anos de carreira em tecnologia. Nesse caminho, foi líder de equipe, coordenador de TI e líder de suporte VIP em operações de grande porte, sempre com SLA de cliente para cumprir.</p>
       <p>Na carreira, trabalhou com empresas como Itaú Unibanco, Pernambucanas, Sodexo, TOTVS e Mr. Kitch. Na coordenação de TI da Sonda, atendendo a Pernambucanas em todo o país, recuperou o SLA em 42% no primeiro mês com a nova equipe de campo e manteve 99% de atingimento mensal.</p>
       <p>Hoje, como diretor executivo, cuida da estratégia comercial, da relação direta com os clientes e da gestão das equipes de suporte e projetos. O SLA no contrato e o Book de Atendimento da ASR vêm dessa experiência: ele passou anos sendo cobrado por indicador.</p>
       <ul class="clientes clientes--escuro" aria-label="Empresas na carreira do Rodrigo"><li>Itaú Unibanco</li><li>Pernambucanas</li><li>Sodexo</li><li>TOTVS</li><li>Mr. Kitch</li></ul>
       <ul class="trajetoria">
+        <li><b class="mono">2008</b><span>Funda a ASR Consult com a sócia Andreia.</span></li>
         <li><b class="mono">2010</b><span>Líder de equipe de suporte a campo na Spread Tecnologia, atendendo o Itaú Unibanco.</span></li>
         <li><b class="mono">2011</b><span>Analista de suporte na Itautec, no cliente Itaú Unibanco.</span></li>
         <li><b class="mono">2012</b><span>Coordenador de TI na Spread Tecnologia: field services e service desk para Itaú Unibanco e CVC.</span></li>
         <li><b class="mono">2015</b><span>Líder de suporte VIP na Globalweb, atendendo a diretoria da Suzano Papel e Celulose.</span></li>
         <li><b class="mono">2016</b><span>Coordenador de TI na Sonda, responsável pela operação da Pernambucanas em nível nacional.</span></li>
-        <li><b class="mono">Hoje</b><span>Diretor executivo da ASR Consult, à frente da estratégia comercial, das finanças e das equipes de suporte e projetos.</span></li>
+        <li><b class="mono">2018</b><span>Passa a se dedicar só à ASR como diretor executivo, à frente da estratégia comercial, das finanças e das equipes de suporte e projetos.</span></li>
       </ul>
       <p class="pessoa__contato"><a class="btn btn--linha" href="https://www.linkedin.com/in/rodrigo-miranda-silvestre/" target="_blank" rel="noopener">LinkedIn do Rodrigo</a> <a class="btn btn--ciano" href="#contato">Falar com o Rodrigo</a></p>
     </div>
@@ -79,7 +80,7 @@ export const paginas = [
   </div>
 </section>` },
     { tipo: 'faq', itens: [
-      ['Quem fundou a ASR Consult?', 'A ASR foi fundada por Rodrigo Miranda Silvestre, hoje diretor executivo, e pela sócia Andreia. Rodrigo tem mais de 20 anos de carreira em tecnologia, com passagens pela coordenação de TI em operações de clientes como Itaú Unibanco e Pernambucanas.'],
+      ['Quem fundou a ASR Consult?', 'A ASR foi fundada em 2008 por Rodrigo Miranda Silvestre, hoje diretor executivo, e pela sócia Andreia. Rodrigo tem mais de 20 anos de carreira em tecnologia, com passagens pela coordenação de TI em operações de clientes como Itaú Unibanco e Pernambucanas.'],
       ['A ASR Consult é parceira oficial da TOTVS?', 'Sim. A ASR é canal homologado TOTVS desde 2008, o que permite implantar, dar suporte e treinar equipes nos sistemas da TOTVS com a metodologia e os treinamentos oficiais da fabricante.'],
       ['Onde fica a ASR e quais regiões ela atende?', 'A sede fica na Rua da Mooca, 4415, em São Paulo (SP). A ASR atende clientes em 11 estados, com atendimento remoto e visitas quando o projeto pede.'],
       ['Quais sistemas TOTVS a ASR atende?', 'Protheus e RM, em todos os módulos: recursos humanos, fiscal e financeiro, contabilidade, compras, estoque e custos, qualidade, exportação e importação, GFE, WMS e TMS.'],

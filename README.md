@@ -28,7 +28,7 @@ Fontes do conteúdo: a apresentação da ASR (`Arquivos/`, fora do Git por causa
 ## Antes de lançar
 
 - Trocar `PUBLICAR = false` para `true` em `scripts/paginas.mjs` e tirar o `noindex` e a etiqueta "Modelo" da home.
-- Colocar a foto do Rodrigo em `quem-somos` (hoje com as iniciais RS) e confirmar a grafia "Mr. Kitch" e o sobrenome da Andreia.
+- A foto do Rodrigo vem de `Arquivos/Foto Rodrigo.jpeg`, cortada em 4:5 para `assets/img/rodrigo-silvestre-*.webp`.
 - Confirmar com a ASR o uso do nome dos clientes nos cases e na lista de empresas.
 - Definir o destino do formulário de contato.
 - Os gráficos da seção "Resultados" da home e os números da central de suporte são ilustrativos.

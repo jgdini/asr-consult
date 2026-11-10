@@ -83,7 +83,8 @@ const cssInterno = `
 .pessoa { display: grid; gap: 40px; align-items: center; }
 .pessoa__foto { position: relative; margin: 0; display: grid; place-items: center; width: 100%; max-width: 420px; aspect-ratio: 4 / 5; border-radius: 18px; overflow: hidden; background: radial-gradient(circle at 30% 20%, rgba(0,219,255,.45), transparent 55%), var(--grad-roxo); border: 1px solid var(--linha-e2); }
 .pessoa__iniciais { font-size: clamp(4rem, 14vw, 7rem); font-weight: 800; letter-spacing: -.05em; color: rgba(255,255,255,.92); }
-.pessoa__foto figcaption { position: absolute; left: 14px; bottom: 14px; color: var(--branco); }
+.pessoa__foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.pessoa__foto figcaption { z-index: 1; padding: 6px 10px; border-radius: 6px; background: rgba(4,11,34,.72);  position: absolute; left: 14px; bottom: 14px; color: var(--branco); }
 .pessoa p { max-width: 62ch; color: var(--texto-e2); }
 .pessoa .pessoa__cargo { margin: 12px 0 20px; color: var(--ciano); }
 .trajetoria { list-style: none; margin: 26px 0; padding: 0; }
@@ -207,7 +208,7 @@ const schema = p => {
   if (p.servico) g.push({ '@type': 'Service', name: p.servico, serviceType: p.servico, description: p.descricao, provider: org, areaServed: { '@type': 'Country', name: 'Brasil' }, url });
   if (p.slug === 'quem-somos') {
     g[0]['@type'] = 'AboutPage';
-    g.push({ ...org, foundingDate: '2008', telephone: '+55-11-97996-7825', address: { '@type': 'PostalAddress', streetAddress: 'Rua da Mooca, 4415', addressLocality: 'São Paulo', addressRegion: 'SP', postalCode: '03165-003', addressCountry: 'BR' }, numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 40 }, founder: [{ '@type': 'Person', name: 'Rodrigo Miranda Silvestre', jobTitle: 'Diretor executivo', email: 'rodrigo.silvestre@asrconsult.com.br', sameAs: 'https://www.linkedin.com/in/rodrigo-miranda-silvestre/' }, { '@type': 'Person', name: 'Andreia' }] });
+    g.push({ ...org, foundingDate: '2008', telephone: '+55-11-97996-7825', address: { '@type': 'PostalAddress', streetAddress: 'Rua da Mooca, 4415', addressLocality: 'São Paulo', addressRegion: 'SP', postalCode: '03165-003', addressCountry: 'BR' }, numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 40 }, founder: [{ '@type': 'Person', name: 'Rodrigo Miranda Silvestre', jobTitle: 'Diretor executivo', image: BASE + 'assets/img/rodrigo-silvestre-720.webp', email: 'rodrigo.silvestre@asrconsult.com.br', sameAs: 'https://www.linkedin.com/in/rodrigo-miranda-silvestre/' }, { '@type': 'Person', name: 'Andreia' }] });
   }
   const faq = (p.blocos || []).find(b => b.tipo === 'faq');
   if (faq) g.push({ '@type': 'FAQPage', mainEntity: faq.itens.map(([q, r]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: r } })) });
