@@ -14,7 +14,7 @@ node scripts/serve.mjs 5620
 
 A home (`index.html`) é a fonte do CSS, do cabeçalho, do contato, do rodapé e do script. As páginas internas são geradas:
 
-- `scripts/conteudo.mjs`: textos de cada página (quem somos, serviços, FAQ). `conteudo-novas.mjs` tem IA, BPO, alocação, sob demanda e Fluig; `conteudo-fiscal.mjs` tem Configurador de Tributos, NFS-e e EFD-Reinf (a ASR não terá blog: temas técnicos viram páginas).
+- `scripts/conteudo.mjs`: textos de cada página (quem somos, serviços, FAQ). `conteudo-novas.mjs` tem IA, BPO, alocação, sob demanda e Fluig; `conteudo-fiscal.mjs` tem Configurador de Tributos, NFS-e e EFD-Reinf; `conteudo-rh.mjs` tem eSocial e App Meu RH (a ASR não terá blog: temas técnicos viram páginas).
 - `scripts/paginas.mjs`: monta as páginas, o schema (serviço, trilha e FAQ), `sitemap.xml`, `robots.txt` e `llms.txt`.
 
 Depois de editar a home ou o conteúdo:

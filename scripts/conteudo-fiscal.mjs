@@ -108,6 +108,6 @@ ${lista(['Eventos de serviços tomados e prestados com retenção', 'Eventos de 
       ['O Protheus gera a EFD-Reinf?', 'Sim. O Protheus gera os eventos da Reinf a partir das notas, dos títulos e das retenções lançadas. A qualidade do envio depende dos cadastros e das regras de retenção configuradas.'],
     ] },
   ],
-  relacionados: ['nfse-protheus', 'consultoria-totvs-protheus', 'suporte-protheus'],
+  relacionados: ['esocial-protheus', 'nfse-protheus', 'consultoria-totvs-protheus'],
 },
 ];
