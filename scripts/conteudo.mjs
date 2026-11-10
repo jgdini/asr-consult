@@ -79,6 +79,22 @@ export const paginas = [
     <ul class="clientes">${['Würth', 'FedEx', "Habib's", 'Ragazzo', 'Hexagon', 'SMC', 'Banco RCI Brasil', 'Colorobbia', 'Bunzl', 'Dimep', 'Tintas Killing', 'Bauminas', 'Iguá', 'Procisa', 'Emplas', 'Valoriza', 'Unagro', 'Hi-Lex', 'Injex', 'Alispec', 'Pensabio', 'Tubarão Saneamento', 'Alphaville Tênis Clube', 'Editora Santuário', 'Ormazabal', 'Hudson Store'].map(n => `<li>${n}</li>`).join('')}</ul>
   </div>
 </section>` },
+    { tipo: 'html', html: `<section class="secao claro" id="midia" aria-labelledby="t-midia2" style="padding-top:0">
+  <div class="wrap">
+    <div class="secao__cabeca">
+      <div><span class="olho mono">ASR na mídia</span><h2 id="t-midia2" class="palavras" style="margin-top:14px">O que o mercado de ERP fala da ASR.</h2></div>
+      <p>Notícias, entrevistas e o perfil da ASR no Portal ERP. Acompanhe também a ASR e o Rodrigo no LinkedIn.</p>
+    </div>
+    <div class="midia">
+      <a class="midia__item sobe" href="https://portalerp.com/br/noticias/erp-summit-cast-debate-evolucao-dos-sistemas-de-gestao-inteligencia-artificial-e-desafios-na-adocao-de-tecnologia" target="_blank" rel="noopener"><span class="midia__fonte mono">Portal ERP · set. 2026</span><b>ERP Summit Cast com Rodrigo Silvestre</b><p>O diretor executivo da ASR fala sobre ERP, automação, customização, retorno do investimento e IA.</p><span class="midia__ir">Ler no Portal ERP →</span></a>
+      <a class="midia__item sobe" href="https://portalerp.com/br/noticias/asr-consult-destaca-erp-e-eficiencia-empresarial-no-erp-summit-2027" target="_blank" rel="noopener"><span class="midia__fonte mono">Portal ERP · out. 2026</span><b>ASR no ERP Summit 2027</b><p>A ASR confirmou presença nos 10 anos do ERP Summit Brasil para falar de implantação, suporte e evolução de sistemas de gestão.</p><span class="midia__ir">Ler no Portal ERP →</span></a>
+      <a class="midia__item sobe" href="https://portalerp.com/br/institucional/asr-consult/asr-consult-participa-do-universo-totvs-2026-evento-voltado-a-tecnologia-e-a-inovacao-nos-negocios" target="_blank" rel="noopener"><span class="midia__fonte mono">Portal ERP · out. 2026</span><b>ASR no Universo TOTVS 2026</b><p>A ASR participou do evento da TOTVS em São Paulo, com Protheus, RM e Fluig.</p><span class="midia__ir">Ler no Portal ERP →</span></a>
+      <a class="midia__item sobe" href="https://portalerp.com/br/institucional/asr-consult/asr-consult-celebra-conquista-de-meta-alcancada-em-parceria-com-a-totvs" target="_blank" rel="noopener"><span class="midia__fonte mono">Portal ERP · jul. 2026</span><b>Meta alcançada com a TOTVS</b><p>A ASR tocou o sino na sede da TOTVS, ritual que marca a meta atingida pelo parceiro.</p><span class="midia__ir">Ler no Portal ERP →</span></a>
+      <a class="midia__item sobe" href="https://portalerp.com/br/institucional/asr-consult/asr-consultoria-consolida-papel-estrategico-no-mercado-de-tecnologia-com-projetos-de-alta-complexidade-corporativa" target="_blank" rel="noopener"><span class="midia__fonte mono">Portal ERP · jun. 2026</span><b>Projetos de alta complexidade</b><p>Os cases da Procisa, Iguá, Habib's, Würth, Bauminas e Emplas contados pela ASR.</p><span class="midia__ir">Ler no Portal ERP →</span></a>
+      <a class="midia__item sobe" href="https://portalerp.com/br/empresa/asr-consult" target="_blank" rel="noopener"><span class="midia__fonte mono">Portal ERP · perfil</span><b>Perfil da ASR no Portal ERP</b><p>Ficha da ASR no maior portal de notícias de ERP do Brasil.</p><span class="midia__ir">Ler no Portal ERP →</span></a>
+    </div>
+  </div>
+</section>` },
     { tipo: 'faq', itens: [
       ['Quem fundou a ASR Consult?', 'A ASR foi fundada em 2008 por Rodrigo Miranda Silvestre, hoje diretor executivo, e pela sócia Andreia. Rodrigo tem mais de 20 anos de carreira em tecnologia, com passagens pela coordenação de TI em operações de clientes como Itaú Unibanco e Pernambucanas.'],
       ['A ASR Consult é parceira oficial da TOTVS?', 'Sim. A ASR é canal homologado TOTVS desde 2008, o que permite implantar, dar suporte e treinar equipes nos sistemas da TOTVS com a metodologia e os treinamentos oficiais da fabricante.'],
