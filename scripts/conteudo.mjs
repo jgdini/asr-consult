@@ -4,6 +4,7 @@
 
 import { lista } from './conteudo-util.mjs';
 import { novas } from './conteudo-novas.mjs';
+import { fiscal } from './conteudo-fiscal.mjs';
 export { lista };
 const conf = t => `<mark class="confirmar" title="Dado a confirmar com o Rodrigo">${t}</mark>`;
 
@@ -284,7 +285,7 @@ ${lista(['Atualizações legais: reforma tributária, eSocial, REINF e layouts d
 <p>No Protheus, a mudança aparece em várias frentes ao mesmo tempo:</p>
 ${lista(['<b>Atualização do sistema</b>, para receber as regras novas da TOTVS', '<b>Configurador de Tributos</b>, onde ficam as regras de cálculo de CBS e IBS', '<b>Cadastros</b> de produtos, clientes e fornecedores com a classificação tributária correta', '<b>NF-e e NFS-e</b> com os novos grupos de CBS e IBS', '<b>Formação de preço</b> e contratos longos, que atravessam as fases da transição', '<b>Apuração</b> e conferência dos créditos'])}
 <p>A ASR revisa o ambiente, acompanha cada atualização da TOTVS e testa os documentos fiscais antes que a fase entre em vigor.</p>`,
-      lado: `<h3>Comece pela release</h3><p>As regras da reforma chegam pelas atualizações do Protheus. Se a sua release está defasada, o primeiro passo é a <a href="atualizacao-protheus.html">atualização do Protheus</a>.</p><a class="btn btn--ciano" href="#contato">Avaliar meu ambiente</a>` },
+      lado: `<h3>Comece pela release</h3><p>As regras da reforma chegam pelas atualizações do Protheus. Se a sua release está defasada, o primeiro passo é a <a href="atualizacao-protheus.html">atualização do Protheus</a>. O passo a passo técnico está na página do <a href="configurador-tributos-protheus.html">Configurador de Tributos</a>.</p><a class="btn btn--ciano" href="#contato">Avaliar meu ambiente</a>` },
     { tipo: 'html', html: `<section class="secao escuro" aria-labelledby="t-calendario">
   <div class="wrap">
     <div class="secao__cabeca">
@@ -315,7 +316,7 @@ ${lista(['<b>Atualização do sistema</b>, para receber as regras novas da TOTVS
       ['A ASR treina a equipe fiscal?', 'Sim. O treinamento no Configurador de Tributos faz parte do projeto, para o time fiscal conseguir manter as regras nas próximas fases.'],
     ] },
   ],
-  relacionados: ['atualizacao-protheus', 'consultoria-totvs-protheus', 'treinamento-protheus'],
+  relacionados: ['configurador-tributos-protheus', 'nfse-protheus', 'atualizacao-protheus'],
 },
 
 // ───────────────────────── HOMOLOGADA
@@ -525,6 +526,7 @@ ${lista(['Implantação de módulos: eSocial, App Meu RH, ACD, NFS-e, REINF, WMS
   relacionados: ['implantacao-protheus', 'suporte-protheus', 'desenvolvimento-advpl'],
 },
 ...novas,
+...fiscal,
 ];
 
 // Página-índice de serviços
