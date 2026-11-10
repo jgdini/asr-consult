@@ -36,7 +36,7 @@ export const paginas = [
       <p class="pessoa__cargo mono">Diretor executivo e sócio-fundador · ASR Consult</p>
       <p>Rodrigo Miranda Silvestre fundou a ASR Consult em 2008 com a sócia Andreia e tem mais de 20 anos de carreira em tecnologia. Nesse caminho, foi líder de equipe, coordenador de TI e líder de suporte VIP em operações de grande porte, sempre com SLA de cliente para cumprir.</p>
       <p>Na carreira, trabalhou com empresas como Itaú Unibanco, Pernambucanas, Sodexo, TOTVS e Mr. Kitch. Na coordenação de TI da Sonda, atendendo a Pernambucanas em todo o país, recuperou o SLA em 42% no primeiro mês com a nova equipe de campo e manteve 99% de atingimento mensal.</p>
-      <p>Hoje, como diretor executivo, cuida da estratégia comercial, da relação direta com os clientes e da gestão das equipes de suporte e projetos. O SLA no contrato e o Book de Atendimento da ASR vêm dessa experiência: ele passou anos sendo cobrado por indicador.</p>
+      <p>Hoje, como diretor executivo, é responsável pela estratégia comercial e pelas relações diretas e indiretas com os clientes. Com grande experiência em gestão de equipes, contribui para a criação de novos processos e para os contratos com parceiros. O SLA no contrato e o Book de Atendimento da ASR vêm dessa experiência: ele passou anos sendo cobrado por indicador.</p>
       <ul class="clientes clientes--escuro" aria-label="Empresas na carreira do Rodrigo"><li>Itaú Unibanco</li><li>Pernambucanas</li><li>Sodexo</li><li>TOTVS</li><li>Mr. Kitch</li></ul>
       <ul class="trajetoria">
         <li><b class="mono">2008</b><span>Funda a ASR Consult com a sócia Andreia.</span></li>
@@ -402,7 +402,7 @@ ${lista(['Rotinas e telas novas no Protheus', 'Relatórios e consultas sob medid
       ['Quanto tempo leva uma integração?', 'Depende do sistema e da quantidade de dados. As horas e o prazo são fechados antes do início, no modelo de projeto de horas fechadas.'],
     ] },
   ],
-  relacionados: ['desenvolvimento-advpl', 'power-bi-protheus', 'consultoria-totvs-protheus'],
+  relacionados: ['consultoria-fluig-totvs', 'desenvolvimento-advpl', 'power-bi-protheus'],
 },
 
 // ───────────────────────── POWER BI

@@ -130,4 +130,47 @@ ${lista(['Sem contrato de longo prazo', 'Consultores sêniores em todos os módu
   ],
   relacionados: ['suporte-protheus', 'projeto-horas-fechadas', 'alocacao-profissionais-totvs'],
 },
+// ───────────────────────── FLUIG
+{
+  slug: 'consultoria-fluig-totvs', menu: 'Fluig', servico: 'Implantação e consultoria TOTVS Fluig',
+  titulo: 'Fluig TOTVS: para que serve, como funciona e implantação | ASR Consult',
+  descricao: 'O que é o TOTVS Fluig, para que serve e como funciona: processos (BPM), aprovações, formulários e documentos (GED) integrados ao Protheus. Implantação e treinamento com canal homologado.',
+  olho: 'TOTVS Fluig',
+  h1: 'Fluig: aprovações e documentos <em>fora do e-mail e da planilha.</em>',
+  apoio: 'Implantação do TOTVS Fluig para digitalizar processos, aprovações e documentos, integrados ao Protheus e entregues por um canal homologado TOTVS.',
+  fatos: [['Plataforma', 'TOTVS Fluig'], ['Processos', 'BPM e workflows'], ['Documentos', 'GED'], ['Integração', 'TOTVS Protheus']],
+  blocos: [
+    { tipo: 'texto', olho: 'Para que serve', titulo: 'O que é o Fluig e para que ele serve.',
+      html: `<p>O TOTVS Fluig é a plataforma da TOTVS para processos, documentos e colaboração. Ele tira do e-mail e da planilha as rotinas que dependem de várias pessoas: uma solicitação de compra que precisa de três aprovações, a admissão de um funcionário que passa pelo RH, pelo gestor e pela TI, um contrato que circula até ser assinado.</p>
+<p>No Fluig, cada uma dessas rotinas vira um fluxo com etapas, responsáveis, prazos e histórico. O gestor vê onde a solicitação está parada, o auditor encontra quem aprovou e quando, e os documentos ficam guardados num lugar só.</p>
+${lista(['<b>Processos (BPM):</b> fluxos de aprovação com etapas, prazos e alertas', '<b>Formulários digitais</b> no lugar de papel e planilha', '<b>Gestão de documentos (GED):</b> versões, permissões e busca', '<b>Portal do colaborador</b> e comunicação interna', '<b>Integração com o Protheus:</b> o que é aprovado no Fluig entra no ERP'])}`,
+      lado: `<h3>Quem já usa Protheus</h3><p>O Fluig conversa com o Protheus: um pedido de compra aprovado no Fluig vira pedido no ERP, sem digitar de novo.</p><a class="btn btn--ciano" href="#contato">Falar sobre Fluig</a>` },
+    { tipo: 'cards', escuro: true, olho: 'Exemplos', titulo: 'Processos que costumam ir para o Fluig.', intro: 'Rotinas com várias aprovações e muito vai e volta de e-mail.',
+      itens: [
+        ['Compras', 'Solicitação, cotação e aprovação por alçada antes do pedido no Protheus.'],
+        ['RH', 'Admissão, férias, desligamento e solicitações do colaborador.'],
+        ['Financeiro', 'Aprovação de pagamentos, reembolsos e adiantamentos.'],
+        ['Contratos', 'Elaboração, revisão, aprovação e guarda de contratos.'],
+        ['Qualidade', 'Não conformidades, auditorias e documentos controlados.'],
+        ['TI', 'Pedidos de acesso, equipamentos e mudanças.'],
+      ] },
+    { tipo: 'passos', olho: 'Como funciona a implantação', titulo: 'Do processo desenhado ao fluxo no ar.',
+      itens: [
+        ['Mapeamento', 'Desenho do processo atual com as áreas: etapas, aprovadores, prazos e exceções.'],
+        ['Modelagem', 'O processo vira fluxo no Fluig, com formulários e regras de alçada.'],
+        ['Integração', 'Ligação com o Protheus para o resultado entrar no ERP.'],
+        ['Testes', 'Usuários-chave rodam o fluxo com casos reais.'],
+        ['Treinamento e virada', 'Capacitação de quem solicita, aprova e administra, e entrada em produção.'],
+        ['Sustentação', 'Ajustes, novos fluxos e suporte depois que o Fluig está em uso.'],
+      ] },
+    { tipo: 'faq', itens: [
+      ['Para que serve o Fluig?', 'O TOTVS Fluig serve para digitalizar processos que dependem de várias pessoas, como aprovações de compras, admissões e contratos, e para guardar e controlar documentos num lugar só.'],
+      ['Como funciona o Fluig?', 'Cada processo vira um fluxo com etapas, responsáveis e prazos. A pessoa abre uma solicitação num formulário digital, ela passa pelas aprovações definidas e o histórico fica registrado. Os documentos ficam na gestão de documentos (GED) da plataforma.'],
+      ['O Fluig integra com o Protheus?', 'Sim. O que é aprovado no Fluig pode gerar registros no Protheus, como pedidos de compra, sem digitação dupla.'],
+      ['A ASR faz treinamento de Fluig?', 'Sim. O treinamento faz parte da implantação e cobre quem solicita, quem aprova e quem administra a plataforma.'],
+      ['Não consigo acessar o Fluig da minha empresa. A ASR ajuda?', 'O acesso ao Fluig é liberado pela TI da sua empresa. Se a sua empresa é cliente da ASR, o suporte pode ajudar a TI a resolver.'],
+    ] },
+  ],
+  relacionados: ['integracao-protheus', 'consultoria-ia-protheus', 'suporte-protheus'],
+},
 ];
