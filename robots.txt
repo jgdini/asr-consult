@@ -1,0 +1,3 @@
+# Modelo em aprovação: não indexar até o lançamento.
+User-agent: *
+Disallow: /

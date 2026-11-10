@@ -1,6 +1,6 @@
 # ASR Consult
 
-Modelo de site de página única para a ASR Consult (canal homologado TOTVS: implantação, suporte e consultoria Protheus). HTML e CSS estáticos, sem dependências em produção.
+Site da ASR Consult (canal homologado TOTVS: implantação, suporte e consultoria Protheus). HTML e CSS estáticos, sem dependências em produção.
 
 Veio do modelo usado na apresentação comercial (`trama/modelos/asrconsult/` no repositório da Halo Company). A seção de proposta e o questionário ficam só lá; este repositório tem apenas o site.
 
@@ -10,8 +10,25 @@ Veio do modelo usado na apresentação comercial (`trama/modelos/asrconsult/` no
 node scripts/serve.mjs 5620
 ```
 
-## Situação
+## Páginas
 
-- A página ainda tem `noindex, nofollow` e a etiqueta "Modelo · sugestão Halo Company". Tirar as duas quando o cliente aprovar e o domínio for apontado.
-- O formulário de contato ainda não envia: falta definir o destino (e-mail ou planilha do comercial da ASR).
-- Os números da seção de resultados são ilustrativos até a ASR mandar dados reais de clientes.
+A home (`index.html`) é a fonte do CSS, do cabeçalho, do contato, do rodapé e do script. As páginas internas são geradas:
+
+- `scripts/conteudo.mjs`: textos de cada página (quem somos, serviços, FAQ).
+- `scripts/paginas.mjs`: monta as páginas, o schema (serviço, trilha e FAQ), `sitemap.xml`, `robots.txt` e `llms.txt`.
+
+Depois de editar a home ou o conteúdo:
+
+```bash
+node scripts/paginas.mjs
+```
+
+Fontes do conteúdo: a apresentação da ASR (`Arquivos/`, fora do Git por causa do tamanho) e a pesquisa de buscas em `trama/analise/asrconsult/mercado.json`.
+
+## Antes de lançar
+
+- Trocar `PUBLICAR = false` para `true` em `scripts/paginas.mjs` e tirar o `noindex` e a etiqueta "Modelo" da home.
+- Preencher os trechos marcados em amarelo em `quem-somos` (dados do Rodrigo: anos de TI, cargos, empresas, foto).
+- Confirmar com a ASR o uso do nome dos clientes nos cases e na lista de empresas.
+- Definir o destino do formulário de contato.
+- Os gráficos da seção "Resultados" da home e os números da central de suporte são ilustrativos.
