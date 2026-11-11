@@ -111,19 +111,33 @@ h2 { font-size: clamp(1.8rem, 4.6vw, 3rem); }
 .modulo span { display: block; margin-top: 4px; color: var(--texto-e2); font-size: .66rem; }
 .modulo::after { content: ""; position: absolute; top: 18px; right: 18px; width: 7px; height: 7px; border-radius: 50%; background: var(--ciano); box-shadow: 0 0 0 0 rgba(0,219,255,.6); }
 /* Rede viva do hero */
+.painel--vivo { position: relative; }
 .painel__status { display: inline-flex; align-items: center; gap: 8px; color: var(--texto-e2); }
 .painel__status i { width: 7px; height: 7px; border-radius: 50%; background: #3EE08F; }
-.rv { position: relative; aspect-ratio: 4 / 3; background-image: radial-gradient(rgba(150,175,240,.16) 1px, transparent 1px); background-size: 18px 18px; }
+.rv-palco { perspective: 900px; background-image: radial-gradient(rgba(150,175,240,.16) 1px, transparent 1px); background-size: 18px 18px; }
+.rv { position: relative; aspect-ratio: 4 / 3; transform-style: preserve-3d; transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .5s var(--ease); }
 .rv__linhas { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-.liga { fill: none; stroke: rgba(150,175,240,.2); stroke-width: 1.2; transition: stroke .5s, stroke-width .5s; }
-.liga.ativa { stroke: rgba(0,219,255,.65); stroke-width: 1.6; }
-.pulso { fill: var(--ciano); }
-.pulso--rastro { fill: rgba(0,219,255,.35); }
-.nucleo { position: absolute; left: 50%; top: 50%; width: 84px; height: 84px; transform: translate(-50%, -50%); border-radius: 50%; display: grid; place-items: center; background: var(--grad-roxo); color: var(--branco); font-weight: 700; font-size: .82rem; letter-spacing: -.01em; border: 1px solid rgba(255,255,255,.25); }
-.nucleo::before, .nucleo::after { content: ""; position: absolute; inset: -1px; border-radius: 50%; border: 1px solid rgba(164,77,255,.55); opacity: 0; }
-.nucleo span { position: relative; z-index: 1; }
-.no { position: absolute; transform: translate(-50%, -50%); padding: 6px 11px; border-radius: 999px; background: var(--n850); border: 1px solid var(--linha-e2); color: var(--texto-e); font-size: .74rem; font-weight: 600; white-space: nowrap; transition: background .35s, border-color .35s, color .35s, transform .35s var(--ease); }
-.no.pisca { background: var(--grad-roxo); border-color: var(--ciano); color: var(--branco); transform: translate(-50%, -50%) scale(1.08); }
+.liga { fill: none; stroke: rgba(150,175,240,.22); stroke-width: 1.2; transition: stroke .5s; }
+.liga.ativa { stroke: rgba(0,219,255,.5); }
+.rv__anel-ext { fill: none; stroke: rgba(164,77,255,.28); stroke-width: 1; stroke-dasharray: 2 7; }
+.rv__orbita circle { fill: none; stroke-width: 1; }
+.rv__orbita--a circle { stroke: rgba(0,219,255,.35); stroke-dasharray: 3 9 18 9; }
+.rv__orbita--b circle { stroke: rgba(164,77,255,.3); stroke-dasharray: 40 14 4 14; }
+.rv__orbita { transform-box: view-box; transform-origin: 200px 150px; }
+.cometa { fill: none; stroke: var(--ciano); stroke-width: 2.4; stroke-linecap: round; }
+.cometa--cauda { stroke: rgba(0,219,255,.35); stroke-width: 4; }
+.cabeca { fill: #E6FBFF; stroke: var(--ciano); stroke-width: 1.5; }
+.nucleo { position: absolute; left: 50%; top: 50%; width: 96px; height: 96px; transform: translate(-50%, -50%) translateZ(36px); border-radius: 50%; display: grid; place-content: center; text-align: center; gap: 1px; background: var(--grad-roxo); color: var(--branco); border: 1px solid rgba(255,255,255,.28); }
+.nucleo::before, .nucleo::after { content: ""; position: absolute; inset: -1px; border-radius: 50%; border: 1px solid rgba(164,77,255,.6); opacity: 0; }
+.nucleo__nome { font-weight: 700; font-size: .84rem; letter-spacing: -.01em; }
+.nucleo__num { font-size: .82rem; letter-spacing: .02em; text-transform: none; font-variant-numeric: tabular-nums; }
+.nucleo__rot { font-size: .58rem; opacity: .8; }
+.no { position: absolute; transform: translate(-50%, -50%) translateZ(18px); display: grid; justify-items: center; gap: 1px; padding: 6px 12px 7px; border-radius: 12px; background: rgba(10,28,66,.92); border: 1px solid var(--linha-e2); color: var(--texto-e); font: inherit; cursor: pointer; white-space: nowrap; transition: background .35s, border-color .35s, transform .35s var(--ease); }
+.no b { font-size: .76rem; font-weight: 600; }
+.no span { font-size: .62rem; color: var(--texto-e2); text-transform: none; letter-spacing: .02em; }
+.no em { font-style: normal; color: var(--ciano); font-variant-numeric: tabular-nums; }
+.no.pisca { background: var(--grad-roxo); border-color: var(--ciano); transform: translate(-50%, -50%) translateZ(18px) scale(1.08); }
+.no.pisca span, .no.pisca em { color: var(--branco); }
 .eventos { list-style: none; margin: 0; padding: 10px 18px 12px; height: 104px; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px; overflow: hidden; border-top: 1px solid var(--linha-e); background: rgba(4,11,34,.55); font-family: "Plex Mono", ui-monospace, monospace; font-size: .74rem; }
 .eventos li { display: grid; grid-template-columns: auto auto 1fr auto; gap: 10px; align-items: center; min-height: 24px; color: var(--texto-e2); white-space: nowrap; transition: opacity .4s, transform .4s var(--ease); }
 .eventos li.entra { opacity: 0; transform: translateY(8px); }
@@ -133,9 +147,25 @@ h2 { font-size: clamp(1.8rem, 4.6vw, 3rem); }
 @media (prefers-reduced-motion: no-preference) {
   .nucleo::before { animation: onda 2.8s ease-out infinite; }
   .nucleo::after { animation: onda 2.8s ease-out 1.4s infinite; }
+  .rv__orbita--a { animation: gira 26s linear infinite; }
+  .rv__orbita--b { animation: gira 40s linear infinite reverse; }
+  .rv__anel-ext { animation: flui 18s linear infinite; }
+  /* entrada: linhas nascem do núcleo, áreas aparecem uma a uma */
+  .rv.espera .liga { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .rv.entrando .liga { stroke-dasharray: 1; stroke-dashoffset: 0; transition: stroke-dashoffset .9s var(--ease); transition-delay: calc(.15s + var(--i) * 70ms); }
+  .rv.espera .no { opacity: 0; }
+  .rv.entrando .no { opacity: 1; transition: opacity .5s, transform .35s var(--ease); transition-delay: calc(.55s + var(--i) * 70ms); }
+  .rv.espera .nucleo { opacity: 0; }
+  .rv.entrando .nucleo { opacity: 1; transition: opacity .6s; }
 }
 @keyframes onda { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(1.9); opacity: 0; } }
-@media (max-width: 479px) { .no { padding: 5px 9px; font-size: .7rem; } .nucleo { width: 70px; height: 70px; font-size: .74rem; } .eventos .ev__hora { display: none; } .eventos li { grid-template-columns: auto 1fr auto; } }
+@keyframes gira { to { transform: rotate(360deg); } }
+@keyframes flui { to { stroke-dashoffset: -180; } }
+@media (max-width: 479px) {
+  .no { padding: 5px 8px 6px; } .no b { font-size: .7rem; } .no span { display: none; }
+  .nucleo { width: 80px; height: 80px; } .nucleo__nome { font-size: .74rem; } .nucleo__num { font-size: .72rem; } .nucleo__rot { display: none; }
+  .eventos .ev__hora { display: none; } .eventos li { grid-template-columns: auto 1fr auto; }
+}
 .painel__rodape { display: flex; align-items: center; gap: 10px; padding: 14px 18px; border-top: 1px solid var(--linha-e); color: var(--texto-e2); }
 .painel__rodape i { width: 7px; height: 7px; border-radius: 50%; background: #3EE08F; flex: none; }
 
@@ -871,71 +901,97 @@ form.enviado .form__ok { display: block; }
   }
 
 
-  // Rede viva do hero: pulso sai do Protheus (ou chega nele) e gera um evento na faixa
+  // Rede viva do hero: cometas entre o Protheus e as áreas, contadores e faixa de eventos
   (function () {
   var reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var rede = document.getElementById('rede'), lista = document.getElementById('eventos');
-  if (rede && lista) {
-    var EV = {
-      fiscal: ['NF-e 4.512 autorizada', 'NFS-e transmitida', 'CBS e IBS calculados na nota'],
-      financeiro: ['Conciliação bancária concluída', '38 títulos baixados via PIX'],
-      bancos: ['DDA: 12 boletos importados', 'Extrato do dia conciliado'],
-      powerbi: ['Painel de vendas atualizado', 'Indicadores do mês recalculados'],
-      estoque: ['Inventário ACD sincronizado', 'Ordem de produção 1.207 apontada'],
-      fluig: ['Pedido de compra aprovado', 'Admissão aprovada pelo gestor'],
-      soc: ['Exame ocupacional integrado', 'Evento de SST enviado'],
-      rh: ['Folha de pagamento calculada', 'eSocial S-1200 enviado']
-    };
-    var NOME = { fiscal: 'Fiscal', financeiro: 'Financeiro', bancos: 'Bancos', powerbi: 'Power BI', estoque: 'Estoque', fluig: 'Fluig', soc: 'SOC', rh: 'RH' };
-    var linhasR = {}, nosR = {};
-    rede.querySelectorAll('.liga').forEach(function (p) { linhasR[p.getAttribute('data-k')] = p; });
-    rede.querySelectorAll('.no').forEach(function (n) { nosR[n.getAttribute('data-k')] = n; });
-    var chaves = Object.keys(linhasR), grupo = document.getElementById('pulsos'), ns = 'http://www.w3.org/2000/svg';
-    var hora = function () { var d = new Date(); return [d.getHours(), d.getMinutes(), d.getSeconds()].map(function (n) { return n < 10 ? '0' + n : n; }).join(':'); };
-    var conta = {};
-    var evento = function (k, anima) {
-      var txts = EV[k]; conta[k] = ((conta[k] || 0) + 1) % txts.length;
-      var li = document.createElement('li');
-      li.innerHTML = '<span class="ev__hora"></span><span class="ev__mod"></span><span class="ev__txt"></span><span class="ev__ok">✓</span>';
-      li.children[0].textContent = hora(); li.children[1].textContent = NOME[k]; li.children[2].textContent = txts[conta[k]];
-      if (anima) li.className = 'entra';
-      lista.appendChild(li);
-      if (anima) requestAnimationFrame(function () { requestAnimationFrame(function () { li.className = ''; }); });
-      while (lista.children.length > 4) lista.removeChild(lista.firstChild);
-    };
-    var ultimo = null, ativos = [];
-    var dispara = function () {
-      var k; do { k = chaves[Math.floor(Math.random() * chaves.length)]; } while (k === ultimo); ultimo = k;
-      var p = linhasR[k], L = p.getTotalLength(), sai = Math.random() < .6;
-      var c = document.createElementNS(ns, 'circle'); c.setAttribute('r', '3.4'); c.setAttribute('class', 'pulso');
-      var r = document.createElementNS(ns, 'circle'); r.setAttribute('r', '2.2'); r.setAttribute('class', 'pulso pulso--rastro');
-      grupo.appendChild(r); grupo.appendChild(c); p.classList.add('ativa');
-      ativos.push({ k: k, p: p, L: L, sai: sai, c: c, r: r, t0: performance.now() });
-      if (ativos.length === 1) requestAnimationFrame(passo);
-    };
-    var DUR = 1150;
-    var passo = function (agora) {
-      ativos = ativos.filter(function (a) {
-        var u = Math.min(1, (agora - a.t0) / DUR), e = u < .5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2;
-        var f = a.sai ? e : 1 - e, f2 = a.sai ? Math.max(0, e - .08) : Math.min(1, 1 - e + .08);
-        var pt = a.p.getPointAtLength(f * a.L), pt2 = a.p.getPointAtLength(f2 * a.L);
-        a.c.setAttribute('cx', pt.x); a.c.setAttribute('cy', pt.y); a.r.setAttribute('cx', pt2.x); a.r.setAttribute('cy', pt2.y);
-        if (u < 1) return true;
-        a.c.remove(); a.r.remove(); a.p.classList.remove('ativa');
-        var no = nosR[a.k]; no.classList.add('pisca'); setTimeout(function () { no.classList.remove('pisca'); }, 650);
-        evento(a.k, true);
-        return false;
-      });
-      if (ativos.length) requestAnimationFrame(passo);
-    };
-    ['fiscal', 'rh', 'financeiro'].forEach(function (k) { evento(k, false); });
-    if (!reduz) {
-      var relogio = null, visivel = false;
-      var liga = function () { if (!relogio && visivel && !document.hidden) { dispara(); relogio = setInterval(dispara, 1500); } };
-      var desliga = function () { if (relogio) { clearInterval(relogio); relogio = null; } };
-      new IntersectionObserver(function (es) { visivel = es[0].isIntersecting; visivel ? liga() : desliga(); }, { threshold: .2 }).observe(rede);
-      document.addEventListener('visibilitychange', function () { document.hidden ? desliga() : liga(); });
-    }
+  if (!rede || !lista) return;
+  var EV = {
+    fiscal: ['NF-e autorizada', 'NFS-e transmitida', 'CBS e IBS calculados na nota'],
+    financeiro: ['Conciliação bancária concluída', 'Títulos baixados via PIX'],
+    bancos: ['DDA: boletos importados', 'Extrato do dia conciliado'],
+    powerbi: ['Painel de vendas atualizado', 'Indicadores do mês recalculados'],
+    estoque: ['Inventário ACD sincronizado', 'Ordem de produção apontada'],
+    fluig: ['Pedido de compra aprovado', 'Admissão aprovada pelo gestor'],
+    soc: ['Exame ocupacional integrado', 'Evento de SST enviado'],
+    rh: ['Folha de pagamento calculada', 'eSocial S-1200 enviado']
+  };
+  var NOME = { fiscal: 'Fiscal', financeiro: 'Financeiro', bancos: 'Bancos', powerbi: 'Power BI', estoque: 'Estoque', fluig: 'Fluig', soc: 'SOC', rh: 'RH' };
+  var linhas = {}, nos = {};
+  rede.querySelectorAll('.liga').forEach(function (p) { linhas[p.getAttribute('data-k')] = p; });
+  rede.querySelectorAll('.no').forEach(function (n) { nos[n.getAttribute('data-k')] = n; });
+  var chaves = Object.keys(linhas), grupo = document.getElementById('pulsos'), ns = 'http://www.w3.org/2000/svg';
+  var totalEl = document.getElementById('rv-total'), total = 18432;
+  var fmt = function (n) { return n.toLocaleString('pt-BR'); };
+  var hora = function () { var d = new Date(); return [d.getHours(), d.getMinutes(), d.getSeconds()].map(function (n) { return n < 10 ? '0' + n : n; }).join(':'); };
+  var ordem = {};
+  var evento = function (k, anima) {
+    var txts = EV[k]; ordem[k] = ((ordem[k] || 0) + 1) % txts.length;
+    var li = document.createElement('li');
+    li.innerHTML = '<span class="ev__hora"></span><span class="ev__mod"></span><span class="ev__txt"></span><span class="ev__ok">✓</span>';
+    li.children[0].textContent = hora(); li.children[1].textContent = NOME[k]; li.children[2].textContent = txts[ordem[k]];
+    if (anima) { li.className = 'entra'; requestAnimationFrame(function () { requestAnimationFrame(function () { li.className = ''; }); }); }
+    lista.appendChild(li);
+    while (lista.children.length > 4) lista.removeChild(lista.firstChild);
+  };
+  var soma = function (k) {
+    var em = nos[k].querySelector('em'), v = +em.getAttribute('data-v') + 1 + Math.floor(Math.random() * 3);
+    em.setAttribute('data-v', v); em.textContent = fmt(v);
+    total += 1 + Math.floor(Math.random() * 4); totalEl.textContent = fmt(total);
+  };
+  ['fiscal', 'rh', 'financeiro'].forEach(function (k) { evento(k, false); });
+  if (reduz) { rede.classList.add('pronto'); return; }
+  rede.classList.add('espera');
+
+  // Cometa: um trecho de linha com cabeça, correndo pela curva
+  var ativos = [], DUR = 1300, CAUDA = .16;
+  var dispara = function (k) {
+    if (!k) { do { k = chaves[Math.floor(Math.random() * chaves.length)]; } while (ativos.some(function (a) { return a.k === k; })); }
+    var p = linhas[k], L = p.getTotalLength(), sai = Math.random() < .55;
+    var cauda = document.createElementNS(ns, 'path'), traco = document.createElementNS(ns, 'path'), cab = document.createElementNS(ns, 'circle');
+    [cauda, traco].forEach(function (el, i) { el.setAttribute('d', p.getAttribute('d')); el.setAttribute('pathLength', '1'); el.setAttribute('class', i ? 'cometa' : 'cometa cometa--cauda'); });
+    cab.setAttribute('r', '3.2'); cab.setAttribute('class', 'cabeca');
+    grupo.appendChild(cauda); grupo.appendChild(traco); grupo.appendChild(cab); p.classList.add('ativa');
+    ativos.push({ k: k, p: p, L: L, sai: sai, cauda: cauda, traco: traco, cab: cab, t0: performance.now() });
+    if (ativos.length === 1) requestAnimationFrame(passo);
+  };
+  var passo = function (agora) {
+    ativos = ativos.filter(function (a) {
+      var u = Math.min(1, (agora - a.t0) / DUR), e = u < .5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2;
+      var f = a.sai ? e : 1 - e;
+      var ini = a.sai ? Math.max(0, f - CAUDA) : f, fim = a.sai ? f : Math.min(1, f + CAUDA);
+      [a.cauda, a.traco].forEach(function (el, i) { var len = Math.max(0.001, fim - ini) * (i ? .55 : 1); var de = a.sai ? fim - len : ini; el.setAttribute('stroke-dasharray', len + ' 2'); el.setAttribute('stroke-dashoffset', -de); });
+      var pt = a.p.getPointAtLength(f * a.L); a.cab.setAttribute('cx', pt.x); a.cab.setAttribute('cy', pt.y);
+      if (u < 1) return true;
+      a.cauda.remove(); a.traco.remove(); a.cab.remove(); a.p.classList.remove('ativa');
+      var no = nos[a.k]; no.classList.add('pisca'); setTimeout(function () { no.classList.remove('pisca'); }, 650);
+      soma(a.k); evento(a.k, true);
+      return false;
+    });
+    if (ativos.length) requestAnimationFrame(passo);
+  };
+
+  // Liga quando aparece, desliga fora da tela ou com a aba escondida
+  var relogio = null, visivel = false, entrou = false;
+  var liga = function () {
+    if (relogio || !visivel || document.hidden) return;
+    if (!entrou) { entrou = true; rede.classList.add('entrando'); setTimeout(function () { rede.classList.add('pronto'); rede.classList.remove('espera', 'entrando'); }, 1700); setTimeout(liga2, 1500); return; }
+    liga2();
+  };
+  var liga2 = function () { if (relogio || !visivel || document.hidden) return; dispara(); relogio = setInterval(function () { dispara(); if (Math.random() < .35) setTimeout(dispara, 380); }, 1250); };
+  var desliga = function () { if (relogio) { clearInterval(relogio); relogio = null; } };
+  new IntersectionObserver(function (es) { visivel = es[0].isIntersecting; visivel ? liga() : desliga(); }, { threshold: .2 }).observe(rede);
+  document.addEventListener('visibilitychange', function () { document.hidden ? desliga() : liga(); });
+
+  // Passar o mouse numa área manda um cometa para ela
+  Object.keys(nos).forEach(function (k) { nos[k].addEventListener('pointerenter', function () { if (rede.classList.contains('pronto') && !ativos.some(function (a) { return a.k === k; })) dispara(k); }); });
+
+  // Profundidade: o quadro inclina seguindo o mouse (só em telas com mouse)
+  if (window.matchMedia('(pointer: fine)').matches) {
+    var palco = document.getElementById('rv-palco'), agendado = false, mx = 0, my = 0;
+    var aplica = function () { agendado = false; rede.style.setProperty('--ry', (mx * 9).toFixed(2) + 'deg'); rede.style.setProperty('--rx', (-my * 7).toFixed(2) + 'deg'); };
+    palco.addEventListener('pointermove', function (e) { var r = palco.getBoundingClientRect(); mx = (e.clientX - r.left) / r.width - .5; my = (e.clientY - r.top) / r.height - .5; if (!agendado) { agendado = true; requestAnimationFrame(aplica); } });
+    palco.addEventListener('pointerleave', function () { mx = my = 0; requestAnimationFrame(aplica); });
   }
   })();
 
