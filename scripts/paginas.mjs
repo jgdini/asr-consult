@@ -19,7 +19,7 @@ const css = pega('<style>', '</style>').replace(/^<style>|<\/style>$/g, '');
 const cabecalho = pega('<div class="progresso"', '</header>').replace('<a class="marca" href="#"', '<a class="marca" href="index.html"');
 const contato = pega('<section class="secao claro" id="contato"', '</section>');
 const rodape = pega('<footer class="rodape">', '</footer>');
-const flutuantes = pega('<div class="modelo-tag', '<script>', false);
+const flutuantes = pega('<div class="cookies"', '<script>', false);
 const script = pega('<script>\n(function', '</script>');
 
 const seta = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>';
@@ -79,6 +79,17 @@ const cssInterno = `
 .faq summary::after { content: "+"; position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font-size: 1.5rem; line-height: 1; color: var(--roxo-escuro); transition: transform .3s var(--ease); }
 .faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
 .faq details p { margin: 0; padding: 0 22px 22px; color: var(--tinta-2); }
+.form-pagina { align-self: start; }
+.form-pagina h3 { font-size: 1.3rem; }
+.consent { display: flex !important; gap: 10px; align-items: flex-start; font-weight: 500 !important; color: var(--tinta-2) !important; }
+.consent input { flex: none; width: 18px; height: 18px; margin-top: 2px; padding: 0; accent-color: var(--roxo-escuro); }
+.consent a { color: var(--roxo-escuro); }
+.politica { max-width: 820px; }
+.politica h2 { margin-bottom: 8px; }
+.politica h3 { margin: 34px 0 10px; font-size: 1.2rem; scroll-margin-top: 90px; }
+.politica ul { margin: 0 0 14px; padding-left: 20px; color: var(--tinta-2); }
+.politica li { margin-bottom: 6px; }
+.politica__data { color: var(--tinta-2); margin-bottom: 8px !important; }
 .confirmar { background: rgba(255,196,107,.2); color: inherit; border: 1px dashed #E0A23B; border-radius: 4px; padding: 0 4px; }
 .pessoa { display: grid; gap: 40px; align-items: center; }
 .pessoa__foto { position: relative; margin: 0; display: grid; place-items: center; width: 100%; max-width: 420px; aspect-ratio: 4 / 5; border-radius: 18px; overflow: hidden; background: radial-gradient(circle at 30% 20%, rgba(0,219,255,.45), transparent 55%), var(--grad-roxo); border: 1px solid var(--linha-e2); }
@@ -202,8 +213,8 @@ const schema = p => {
     { '@type': 'WebPage', '@id': url, url, name: p.titulo, description: p.descricao, inLanguage: 'pt-BR', isPartOf: { '@type': 'WebSite', name: 'ASR Consult', url: BASE }, about: { '@id': ORG_ID } },
     { '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Início', item: BASE },
-      ...(p.slug !== 'servicos' && p.slug !== 'quem-somos' ? [{ '@type': 'ListItem', position: 2, name: 'Serviços', item: BASE + 'servicos.html' }] : []),
-      { '@type': 'ListItem', position: p.slug !== 'servicos' && p.slug !== 'quem-somos' ? 3 : 2, name: p.menu, item: url } ] },
+      ...(p.servico ? [{ '@type': 'ListItem', position: 2, name: 'Serviços', item: BASE + 'servicos.html' }] : []),
+      { '@type': 'ListItem', position: p.servico ? 3 : 2, name: p.menu, item: url } ] },
   ];
   if (p.servico) g.push({ '@type': 'Service', name: p.servico, serviceType: p.servico, description: p.descricao, provider: org, areaServed: { '@type': 'Country', name: 'Brasil' }, url });
   if (p.slug === 'quem-somos') {
@@ -219,7 +230,7 @@ const schema = p => {
 const pagina = (p, corpo) => {
   nSec = 0;
   const url = BASE + p.slug + '.html';
-  const meio = p.slug === 'servicos' || p.slug === 'quem-somos' ? '' : '<a href="servicos.html">Serviços</a><span aria-hidden="true">/</span>';
+  const meio = !p.servico ? '' : '<a href="servicos.html">Serviços</a><span aria-hidden="true">/</span>';
   const fatos = p.fatos ? `<aside class="painel fatos" aria-label="Em resumo">
       <div class="painel__topo"><span class="mono">Em resumo</span><span class="painel__luzes" aria-hidden="true"><i></i><i></i><i></i></span></div>
       <dl>${p.fatos.map(([k, v]) => `<div><dt class="mono">${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
@@ -269,7 +280,7 @@ ${cabecalho}
 
 ${corpo}
 
-${contato}
+${p.semContato ? '' : contato}
 </main>
 
 ${rodape}

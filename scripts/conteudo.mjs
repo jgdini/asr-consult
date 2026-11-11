@@ -6,6 +6,7 @@ import { lista } from './conteudo-util.mjs';
 import { novas } from './conteudo-novas.mjs';
 import { fiscal } from './conteudo-fiscal.mjs';
 import { rh } from './conteudo-rh.mjs';
+import { institucional } from './conteudo-institucional.mjs';
 export { lista };
 const conf = t => `<mark class="confirmar" title="Dado a confirmar com o Rodrigo">${t}</mark>`;
 
@@ -529,6 +530,7 @@ ${lista(['Implantação de módulos: eSocial, App Meu RH, ACD, NFS-e, REINF, WMS
 ...novas,
 ...fiscal,
 ...rh,
+...institucional,
 ];
 
 // Página-índice de serviços

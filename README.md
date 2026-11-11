@@ -30,5 +30,7 @@ Fontes do conteúdo: a apresentação da ASR (`Arquivos/`, fora do Git por causa
 - Trocar `PUBLICAR = false` para `true` em `scripts/paginas.mjs` e tirar o `noindex` e a etiqueta "Modelo" da home.
 - A foto do Rodrigo vem de `Arquivos/Foto Rodrigo.jpeg`, cortada em 4:5 para `assets/img/rodrigo-silvestre-*.webp`.
 - Confirmar com a ASR o uso do nome dos clientes nos cases e na lista de empresas.
-- Definir o destino do formulário de contato.
+- Definir o destino dos formulários: contato (comercial), trabalhe conosco (RH) e solicitação LGPD (encarregado).
+- Preencher o nome e o e-mail do encarregado de dados em politica-de-privacidade (trechos em amarelo) e confirmar o prazo de guarda dos currículos (2 anos).
+- O aviso de cookies guarda a escolha em localStorage (asr-cookies) e expõe window.asrCookies e o evento asr:cookies. Ferramentas de medição só podem ser carregadas com "aceitar".
 - Os gráficos da seção "Resultados" da home e os números da central de suporte são ilustrativos.
