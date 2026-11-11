@@ -33,12 +33,12 @@ ${lista(['Diagnóstico das tarefas que mais consomem tempo', 'Automação de pro
         ['Priorização', 'Lista de casos de uso com esforço, ganho esperado e risco.'],
         ['Preparação dos dados', 'Ajuste de cadastros e integrações que a IA vai usar.'],
         ['Piloto', 'Um caso de uso em produção controlada, medido antes e depois.'],
-        ['Expansão', 'Os casos que deram resultado ganham escala.'],
+        ['Expansão', 'Os casos que deram resultado são levados para outras áreas.'],
       ] },
     { tipo: 'faq', itens: [
       ['Dá para usar inteligência artificial com o Protheus?', 'Sim. A IA pode ler os dados do Protheus por integrações e consultas, automatizar tarefas ligadas ao ERP e apoiar decisões com o histórico da empresa.'],
       ['Os dados da empresa ficam seguros?', 'O projeto define quais dados a IA pode acessar e quem pode consultar cada informação, com as mesmas regras de perfil usadas no ERP.'],
-      ['Por onde começar?', 'Pelo diagnóstico. Ele mostra onde a IA traz ganho real na sua operação e qual caso de uso vale fazer primeiro.'],
+      ['Por onde começar?', 'Pelo diagnóstico. Ele mostra onde a IA traz ganho na sua operação e qual caso de uso vale fazer primeiro.'],
     ] },
   ],
   relacionados: ['power-bi-protheus', 'integracao-protheus', 'desenvolvimento-advpl'],
@@ -51,13 +51,13 @@ ${lista(['Diagnóstico das tarefas que mais consomem tempo', 'Automação de pro
   descricao: 'BPO (Business Process Outsourcing) para empresas que usam TOTVS Protheus: a ASR opera processos de rotina no próprio ERP, com indicadores e relatório mensal.',
   olho: 'BPO',
   h1: 'BPO: a ASR opera a rotina <em>dentro do seu Protheus.</em>',
-  apoio: 'Terceirização de processos de negócio executada por quem conhece o ERP, para a sua equipe cuidar do que é estratégico.',
+  apoio: 'Terceirização de rotinas de negócio executada por quem conhece o ERP, para a sua equipe parar de gastar o mês com lançamento e conferência.',
   fatos: [['Modelo', 'Business Process Outsourcing'], ['Onde', 'No Protheus da sua empresa'], ['Acompanhamento', 'Indicadores mensais'], ['Equipe', 'Consultores sêniores']],
   blocos: [
     { tipo: 'texto', olho: 'O que é BPO', titulo: 'Processos de rotina com quem conhece o sistema.',
       html: `<p>BPO (Business Process Outsourcing) é a terceirização de um processo de negócio inteiro: a empresa define o que precisa ser entregue, e o parceiro executa a rotina com equipe, prazo e indicadores próprios.</p>
 <p>No BPO da ASR, o trabalho é feito no Protheus da sua empresa. A informação continua no seu ERP, a operação segue os seus parâmetros e o resultado aparece nos seus relatórios. Quem executa conhece o sistema, o que reduz erro de lançamento e retrabalho no fechamento.</p>
-${lista(['Processos executados no próprio Protheus da empresa', 'Escopo, prazos e indicadores combinados antes de começar', 'Acompanhamento periódico com o que foi feito e o que precisa de atenção', 'Redução de custos com equipe interna e retrabalho', 'Foco do time interno no que é estratégico'])}`,
+${lista(['Processos executados no próprio Protheus da empresa', 'Escopo, prazos e indicadores combinados antes de começar', 'Acompanhamento periódico com o que foi feito e o que precisa de atenção', 'Redução de custos com equipe interna e retrabalho', 'Equipe interna com tempo para analisar os números em vez de lançá-los'])}`,
       lado: `<h3>Como na sustentação</h3><p>O BPO segue a mesma lógica do suporte da ASR: prazos combinados, indicadores e acompanhamento para a gestão.</p><a class="btn btn--ciano" href="#contato">Avaliar um processo</a>` },
     { tipo: 'cards', escuro: true, olho: 'Processos', titulo: 'Rotinas que costumam ir para o BPO.', intro: 'A lista final sai do diagnóstico de cada empresa.',
       itens: [
@@ -117,7 +117,7 @@ ${lista(['Consultores funcionais por módulo: fiscal, financeiro, RH, estoque, c
   apoio: 'Para empresas que têm equipe interna e só precisam de um especialista de vez em quando: um erro que ninguém resolve, uma configuração nova, uma dúvida de legislação.',
   fatos: [['Contrato', 'Sem prazo longo'], ['Equipe', 'Consultores sêniores'], ['Módulos', 'Todos os módulos TOTVS'], ['Telefone', '(11) 2659-5360']],
   blocos: [
-    { tipo: 'texto', olho: 'Para quem é', titulo: 'Um especialista Protheus a um telefonema de distância.',
+    { tipo: 'texto', olho: 'Para quem é', titulo: 'Para quando o problema foge do dia a dia da sua equipe.',
       html: `<p>Nem toda empresa precisa de sustentação contínua. Muitas têm analistas internos que cuidam do dia a dia e só precisam de ajuda quando aparece algo fora do comum: uma rejeição de nota que ninguém entende, um cálculo de folha que não fecha, uma rotina que parou depois de um pacote.</p>
 <p>No suporte sob demanda, a empresa chama a ASR quando precisa e paga pelas horas usadas. O atendimento é feito pelos mesmos consultores sêniores que atendem os contratos de sustentação.</p>
 ${lista(['Sem contrato de longo prazo', 'Consultores sêniores em todos os módulos TOTVS', 'Resposta rápida para problemas que travam a operação', 'Horas cobradas pelo que foi usado'])}`,

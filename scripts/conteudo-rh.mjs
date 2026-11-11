@@ -15,7 +15,7 @@ export const rh = [
   blocos: [
     { tipo: 'texto', olho: 'Por que dá trabalho', titulo: 'O eSocial começa no cadastro do funcionário.',
       html: `<p>O eSocial reúne num sistema do governo as informações trabalhistas, previdenciárias e fiscais da empresa. Admissão, afastamento, folha, pagamento, desligamento, exames e riscos do trabalho viram eventos enviados dentro de prazos. Esses dados também alimentam o FGTS Digital e a DCTFWeb, então um erro no eSocial vira guia errada.</p>
-<p>No Protheus, os eventos nascem dos módulos de RH, folha e ponto e são organizados para transmissão pela TOTVS. A maior parte das rejeições não é problema de transmissão: é cadastro incompleto, rubrica com incidência errada ou evento fora de ordem. Por isso a ASR começa pela base.</p>
+<p>No Protheus, os eventos nascem dos módulos de RH, folha e ponto e são organizados para transmissão pela TOTVS. Quase sempre, a rejeição vem de cadastro incompleto, rubrica com incidência errada ou evento enviado fora de ordem. Por isso a ASR começa pelos cadastros.</p>
 ${lista(['Eventos de tabela: empresa, rubricas, lotações e cargos', 'Eventos não periódicos: admissão, alteração, afastamento e desligamento', 'Eventos periódicos: folha, pagamentos e fechamento do mês', 'Saúde e segurança do trabalho (SST): CAT, exames e condições ambientais', 'Conferência de incidências de INSS, FGTS e IR nas rubricas'])}`,
       lado: `<h3>Cases de eSocial</h3><p><b>Iguá:</b> implantação do eSocial, com projeto de estoque e integração com o Sênior.</p><p><b>Procisa:</b> implantação do eSocial e recuperação do ambiente após ataque cibernético.</p><p><b>Würth:</b> eSocial dentro de um projeto maior de RH.</p><a class="btn btn--ciano" href="#contato">Revisar meu eSocial</a>` },
     { tipo: 'cards', escuro: true, olho: 'SST', titulo: 'Saúde e segurança do trabalho integradas ao RH.', intro: 'Os eventos de SST costumam vir de outro sistema. A ASR integra o Protheus ao SOC para eles chegarem certos à folha e ao eSocial.',
@@ -54,7 +54,7 @@ ${lista(['Eventos de tabela: empresa, rubricas, lotações e cargos', 'Eventos n
   blocos: [
     { tipo: 'texto', olho: 'O que muda', titulo: 'Menos pedidos ao RH, menos papel.',
       html: `<p>Boa parte do dia do RH vai em pedidos repetidos: segunda via de holerite, informe de rendimentos, saldo de férias, espelho de ponto. O App Meu RH, da TOTVS, coloca essas informações no celular do colaborador, lendo os dados direto do Protheus.</p>
-<p>O gestor também ganha: aprova férias e outras solicitações da equipe pelo aplicativo, sem formulário em papel nem troca de e-mail.</p>
+<p>O gestor aprova férias e outras solicitações da equipe pelo aplicativo, sem formulário em papel nem troca de e-mail.</p>
 ${lista(['Holerite e informe de rendimentos no celular', 'Solicitação e acompanhamento de férias', 'Espelho de ponto e justificativas', 'Atualização de dados cadastrais', 'Aprovações do gestor pelo aplicativo'])}`,
       lado: `<h3>Case Avacy</h3><p>A ASR fez a automação e a implantação do App Meu RH na Avacy.</p><a class="btn btn--ciano" href="#contato">Implantar o Meu RH</a>` },
     { tipo: 'passos', olho: 'Como implantamos', titulo: 'Do Protheus ao aplicativo no celular.',

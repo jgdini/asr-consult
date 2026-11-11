@@ -16,7 +16,7 @@ export const fiscal = [
   blocos: [
     { tipo: 'texto', olho: 'O que é', titulo: 'Onde o Protheus guarda as regras da reforma.',
       html: `<p>O Configurador de Tributos é a parte do Protheus onde ficam as regras de cálculo dos tributos. Em vez de depender de parâmetros espalhados pelo sistema, cada tributo ganha regras próprias: em quais operações incide, qual a base de cálculo, qual a alíquota e como aparece no documento fiscal.</p>
-<p>A TOTVS escolheu esse caminho para a reforma tributária. As regras de CBS e IBS chegam pelas atualizações do Protheus e são configuradas ali, operação por operação. Por isso a ordem importa: primeiro o sistema atualizado, depois as tabelas, depois as regras e os cadastros.</p>
+<p>A TOTVS escolheu esse caminho para a reforma tributária. As regras de CBS e IBS chegam pelas atualizações do Protheus e são configuradas ali, operação por operação. Por isso a sequência é sempre a mesma: sistema atualizado, tabelas carregadas, regras e cadastros.</p>
 ${lista(['Regras de cálculo de CBS e IBS por tipo de operação', 'Vínculo das regras com as operações de entrada e saída', 'Classificação tributária de produtos e serviços', 'Reflexo nos documentos fiscais e na apuração'])}`,
       lado: `<h3>Antes de tudo, a release</h3><p>Sem as atualizações da TOTVS, o Configurador não tem as regras novas. Se o seu Protheus está defasado, comece pela <a href="atualizacao-protheus.html">atualização</a>.</p><a class="btn btn--ciano" href="#contato">Revisar meu Configurador</a>` },
     { tipo: 'passos', olho: 'Checklist', titulo: 'Configurações mínimas, na ordem.',
@@ -59,7 +59,7 @@ ${lista(['Regras de cálculo de CBS e IBS por tipo de operação', 'Vínculo das
   blocos: [
     { tipo: 'texto', olho: 'Por que mexer agora', titulo: 'A nota de serviço mudou duas vezes.',
       html: `<p>Por muitos anos, cada prefeitura teve o próprio layout de NFS-e, e o Protheus precisava de um ajuste para cada município. O padrão nacional da NFS-e unifica esse modelo, e a reforma tributária tornou o padrão nacional o caminho para levar CBS e IBS nas notas de serviço.</p>
-<p>Na prática, empresas que emitem nota de serviço pelo Protheus precisam revisar três coisas: a forma de transmissão, os cadastros dos serviços (com o código NBS) e o cálculo de CBS e IBS no Configurador de Tributos.</p>
+<p>Empresas que emitem nota de serviço pelo Protheus precisam revisar três coisas: a forma de transmissão, os cadastros dos serviços (com o código NBS) e o cálculo de CBS e IBS no Configurador de Tributos.</p>
 ${lista(['Emissão da NFS-e a partir do faturamento do Protheus', 'Transmissão pelo serviço da TOTVS que envia os documentos fiscais', 'Cadastro de serviços com código NBS e classificação tributária', 'Campos de CBS e IBS calculados pelo Configurador de Tributos', 'Tratamento de retenções (ISS, INSS, IR, PIS, Cofins e CSLL)'])}`,
       lado: `<h3>Prestadores de serviço</h3><p>Se a empresa emite muitas notas de serviço, a NFS-e é o primeiro documento a revisar na reforma. Um erro aqui aparece na nota de todos os clientes.</p><a class="btn btn--ciano" href="#contato">Revisar minha NFS-e</a>` },
     { tipo: 'passos', olho: 'Como implantamos', titulo: 'NFS-e no Protheus em cinco etapas.',
@@ -91,9 +91,9 @@ ${lista(['Emissão da NFS-e a partir do faturamento do Protheus', 'Transmissão 
   blocos: [
     { tipo: 'texto', olho: 'O que é', titulo: 'A EFD-Reinf junta as retenções num lugar só.',
       html: `<p>A EFD-Reinf é a escrituração digital das retenções e de outras informações fiscais que não estão no eSocial: serviços tomados e prestados com retenção de INSS, retenções de IR, PIS, Cofins e CSLL, receitas de eventos esportivos, entre outras. Ela é enviada todo mês e, junto com o eSocial, substituiu a DIRF.</p>
-<p>No Protheus, a Reinf nasce dos lançamentos do dia a dia: notas de entrada e de saída, títulos a pagar e retenções. Se esses dados estão errados na origem, o erro chega à Receita. Por isso a implantação começa pelos cadastros e pelas regras de retenção, e não pela transmissão.</p>
-${lista(['Eventos de serviços tomados e prestados com retenção', 'Eventos de retenções de IR, PIS, Cofins e CSLL', 'Fechamento e reabertura do período', 'Conferência dos valores com o financeiro e o fiscal', 'Integração com o eSocial para fechar o ciclo das informações'])}`,
-      lado: `<h3>Case Iguá e Procisa</h3><p>A ASR implantou o eSocial na Iguá e na Procisa. A Reinf usa a mesma base de cadastros e fecha o ciclo das obrigações.</p><a class="btn btn--ciano" href="#contato">Falar sobre a Reinf</a>` },
+<p>No Protheus, a Reinf nasce dos lançamentos do dia a dia: notas de entrada e de saída, títulos a pagar e retenções. Se esses dados estão errados na origem, o erro chega à Receita. Por isso a implantação começa pelos cadastros e pelas regras de retenção.</p>
+${lista(['Eventos de serviços tomados e prestados com retenção', 'Eventos de retenções de IR, PIS, Cofins e CSLL', 'Fechamento e reabertura do período', 'Conferência dos valores com o financeiro e o fiscal', 'Integração com o eSocial, que usa os mesmos cadastros'])}`,
+      lado: `<h3>Case Iguá e Procisa</h3><p>A ASR implantou o eSocial na Iguá e na Procisa. A Reinf usa a mesma base de cadastros do eSocial.</p><a class="btn btn--ciano" href="#contato">Falar sobre a Reinf</a>` },
     { tipo: 'passos', olho: 'Como implantamos', titulo: 'Da retenção certa ao evento transmitido.',
       itens: [
         ['Diagnóstico', 'Leitura das retenções feitas hoje e dos cadastros de fornecedores, clientes e naturezas.'],

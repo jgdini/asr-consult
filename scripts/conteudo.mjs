@@ -38,7 +38,7 @@ export const paginas = [
       <p class="pessoa__cargo mono">Diretor executivo e sócio-fundador · ASR Consult</p>
       <p>Rodrigo Miranda Silvestre fundou a ASR Consult em 2008 com a sócia Andreia e tem mais de 20 anos de carreira em tecnologia. Nesse caminho, foi líder de equipe, coordenador de TI e líder de suporte VIP em operações de grande porte, sempre com SLA de cliente para cumprir.</p>
       <p>Na carreira, trabalhou com empresas como Itaú Unibanco, Pernambucanas, Sodexo, TOTVS e Mr. Kitch. Na coordenação de TI da Sonda, atendendo a Pernambucanas em todo o país, recuperou o SLA em 42% no primeiro mês com a nova equipe de campo e manteve 99% de atingimento mensal.</p>
-      <p>Hoje, como diretor executivo, é responsável pela estratégia comercial e pelas relações diretas e indiretas com os clientes. Com grande experiência em gestão de equipes, contribui para a criação de novos processos e para os contratos com parceiros. O SLA no contrato e o Book de Atendimento da ASR vêm dessa experiência: ele passou anos sendo cobrado por indicador.</p>
+      <p>Hoje, como diretor executivo, é responsável pela estratégia comercial e pelas relações diretas e indiretas com os clientes. Com grande experiência em gestão de equipes, contribui para a criação de novos processos e para os contratos com parceiros. Foram anos sendo cobrado por SLA do lado do prestador de serviço, e é daí que vêm o SLA no contrato e o Book de Atendimento da ASR.</p>
       <ul class="clientes clientes--escuro" aria-label="Empresas na carreira do Rodrigo"><li>Itaú Unibanco</li><li>Pernambucanas</li><li>Sodexo</li><li>TOTVS</li><li>Mr. Kitch</li></ul>
       <ul class="trajetoria">
         <li><b class="mono">2008</b><span>Funda a ASR Consult com a sócia Andreia.</span></li>
@@ -58,7 +58,7 @@ export const paginas = [
         ['SLA de sustentação', 'Nível mínimo de 85% garantido em contrato, mantido em todos os meses do ano, independentemente do volume de chamados.'],
         ['Book de Atendimento', 'Relatório mensal com métricas, causas dos chamados e planos de ação para corrigir o que se repete.'],
         ['Equipe 100% sênior', 'Mais de 40 consultores sêniores, com especialistas em todos os módulos TOTVS.'],
-        ['Transparência total', 'Planos de ação para melhoria contínua montados junto com o cliente.'],
+        ['Planos de ação com o cliente', 'As melhorias são definidas junto com o cliente, com prazo e responsável.'],
         ['Documentação padrão TOTVS', 'Rastreabilidade e qualidade em todas as entregas, o que facilita as atualizações futuras.'],
         ['Canal homologado TOTVS', 'Parceiro oficial da TOTVS, com treinamentos da Universidade TOTVS e acesso aos canais técnicos da fabricante.'],
       ] },
@@ -97,7 +97,7 @@ export const paginas = [
     </div>
   </div>
 </section>` },
-    { tipo: 'faq', itens: [
+    { tipo: 'faq', titulo: 'Perguntas sobre a ASR.', itens: [
       ['Quem fundou a ASR Consult?', 'A ASR foi fundada em 2008 por Rodrigo Miranda Silvestre, hoje diretor executivo, e pela sócia Andreia. Rodrigo tem mais de 20 anos de carreira em tecnologia, com passagens pela coordenação de TI em operações de clientes como Itaú Unibanco e Pernambucanas.'],
       ['A ASR Consult é parceira oficial da TOTVS?', 'Sim. A ASR é canal homologado TOTVS desde 2008, o que permite implantar, dar suporte e treinar equipes nos sistemas da TOTVS com a metodologia e os treinamentos oficiais da fabricante.'],
       ['Onde fica a ASR e quais regiões ela atende?', 'A sede fica na Rua da Mooca, 4415, em São Paulo (SP). A ASR atende clientes em 11 estados, com atendimento remoto e visitas quando o projeto pede.'],
@@ -118,11 +118,11 @@ export const paginas = [
   fatos: [['Sistemas', 'Protheus e RM'], ['Equipe', '+40 consultores sêniores'], ['Desde', '2008'], ['Atendimento', 'São Paulo e mais 10 estados']],
   blocos: [
     { tipo: 'texto', olho: 'Para quem é', titulo: 'Quando a empresa precisa de consultoria no Protheus.',
-      html: `<p>A maior parte das empresas que procura consultoria Protheus já tem o sistema rodando. O problema aparece de outro jeito: o fechamento do mês leva dias, o fiscal ajusta nota na mão, o estoque do sistema não bate com o físico, ou cada área usa o ERP de um jeito.</p>
+      html: `<p>Quem procura consultoria Protheus quase sempre já tem o sistema rodando. O problema aparece no dia a dia: o fechamento do mês leva dias, o fiscal ajusta nota na mão, o estoque do sistema não bate com o físico, ou cada área usa o ERP de um jeito.</p>
 <p>A consultoria da ASR começa olhando o processo e só depois o sistema. O consultor do módulo senta com a área, entende como o trabalho é feito, compara com o que o Protheus já oferece e propõe o ajuste: um parâmetro, um cadastro corrigido, um treinamento ou, quando o padrão não atende, um desenvolvimento em ADVPL.</p>
 ${lista(['Revisão de processos por área, com o usuário-chave junto', 'Ajuste de parâmetros e cadastros que geram retrabalho', 'Plano de ação priorizado, com prazo e responsável', 'Documentação no padrão TOTVS do que foi alterado'])}`,
       lado: `<h3>Também atendemos RM</h3><p>Além do Protheus, a ASR atende o TOTVS RM, muito usado em RH, folha de pagamento e educação.</p><a class="btn btn--ciano" href="#contato">Falar com um consultor</a>` },
-    { tipo: 'cards', escuro: true, olho: 'Módulos', titulo: 'Gestão integrada de ponta a ponta.', intro: 'Consultores especialistas em cada área do Protheus e do RM.',
+    { tipo: 'cards', escuro: true, olho: 'Módulos', titulo: 'Todos os módulos do Protheus e do RM.', intro: 'Consultores especialistas em cada área do Protheus e do RM.',
       itens: [
         ['Recursos humanos', 'Folha, ponto, eSocial, benefícios e App Meu RH.'],
         ['Fiscal e financeiro', 'Livros fiscais, apuração, contas a pagar e receber, DDA e PIX.'],
@@ -157,7 +157,7 @@ ${lista(['Revisão de processos por área, com o usuário-chave junto', 'Ajuste 
   descricao: 'Implantação do TOTVS Protheus com planejamento, cronograma e treinamento via Universidade TOTVS. Consultoria homologada com +480 projetos entregues desde 2008.',
   olho: 'Implantação Protheus',
   h1: 'Implantação do Protheus com <em>cronograma e equipe treinada.</em>',
-  apoio: 'Planejamento detalhado, cronograma rigoroso e treinamento direcionado, pela Universidade TOTVS ou no formato da sua empresa, para o ERP entrar no ar e ser usado.',
+  apoio: 'Planejamento por fase, cronograma com marcos e treinamento pela Universidade TOTVS ou no formato da sua empresa, para o ERP entrar no ar e ser usado.',
   fatos: [['Projetos entregues', '+480'], ['Treinamento', 'Universidade TOTVS'], ['Modelo', 'Horas fechadas'], ['Documentação', 'Padrão TOTVS']],
   blocos: [
     { tipo: 'texto', olho: 'O que entregamos', titulo: 'Uma implantação termina quando a equipe usa o sistema sozinha.',
@@ -202,16 +202,16 @@ ${lista(['Levantamento dos processos de cada área antes de configurar', 'Cronog
       ] },
     { tipo: 'texto', olho: 'SLA de sustentação', titulo: 'O nível de serviço fica escrito no contrato.',
       html: `<p>Na sustentação da ASR, o SLA mínimo de 85% está no contrato. Em qualquer volume de chamados, a ASR mantém o índice acima desse patamar em todos os meses do ano.</p>
-<p>O cliente ganha previsibilidade: menos retrabalho, menos custo com correção e operação estável. O atendimento é feito por consultores sêniores que conhecem o ambiente, em horário comercial, com plantão 24/7 em fins de semana e feriados.</p>
+<p>Com o SLA fixo, o cliente gasta menos com retrabalho e correção, e a operação não para. O atendimento é feito por consultores sêniores que conhecem o ambiente, em horário comercial, com plantão 24/7 em fins de semana e feriados.</p>
 ${lista(['Suporte N1 e N2 em todos os módulos TOTVS', 'Atendimento por consultores sêniores', 'Indicadores de SLA acompanhados mês a mês', 'Plantão em fins de semana e feriados'])}`,
       lado: `<h3>Dois modelos</h3><p><b>Sustentação:</b> suporte contínuo com SLA em contrato.</p><p><b>Banco de horas (AMS):</b> um pacote de horas para chamados, melhorias e pequenos projetos, usado conforme a demanda.</p><a class="btn btn--ciano" href="#contato">Comparar os modelos</a>` },
     { tipo: 'html', html: `<section class="secao escuro" id="book" aria-labelledby="t-book">
   <div class="wrap book">
     <div>
       <span class="olho mono">Book de Atendimento</span>
-      <h2 id="t-book" class="palavras" style="margin-top:14px">Uma visão gerencial que transforma suporte em estratégia.</h2>
+      <h2 id="t-book" class="palavras" style="margin-top:14px">Um relatório mensal para a diretoria acompanhar o suporte.</h2>
       <p>O Book de Atendimento é a metodologia de atendimento da ASR. Todo mês, o cliente recebe um diagnóstico com métricas, causas dos chamados e planos de ação.</p>
-      <p>O resultado aparece na operação: recorrências corrigidas, usuários capacitados e uso do sistema melhorando a cada mês.</p>
+      <p>Com o plano de ação em dia, os erros que se repetiam são corrigidos na origem e os usuários recebem treinamento onde mais erram.</p>
     </div>
     <figure class="book__quadro" aria-label="Exemplo de plano de ação do Book de Atendimento">
       <div class="book__topo mono"><span>Status report · plano de ação</span><span>ASR</span></div>
@@ -251,7 +251,7 @@ ${lista(['Suporte N1 e N2 em todos os módulos TOTVS', 'Atendimento por consulto
   blocos: [
     { tipo: 'texto', olho: 'Por que atualizar', titulo: 'Release antiga fica sem as mudanças da lei.',
       html: `<p>A TOTVS publica novas releases do Protheus com correções, melhorias e, principalmente, as mudanças da legislação. Quando a empresa fica numa release antiga, essas atualizações deixam de chegar, e cada exigência nova vira um ajuste manual ou um desenvolvimento à parte.</p>
-<p>A reforma tributária deixa isso mais urgente: as regras de CBS e IBS, o Configurador de Tributos e os novos campos das notas fiscais chegam pelas atualizações do sistema. Empresas desatualizadas precisam primeiro trocar de release para depois se adequar.</p>
+<p>Com a reforma tributária, isso ficou mais urgente, porque as regras de CBS e IBS, o Configurador de Tributos e os novos campos das notas fiscais chegam pelas atualizações do sistema. Empresas desatualizadas precisam primeiro trocar de release para depois se adequar.</p>
 ${lista(['Atualizações legais: reforma tributária, eSocial, REINF e layouts de NF-e e NFS-e', 'Correções de segurança e de erros conhecidos', 'Ganho de desempenho, como no projeto de release e SQL da Emplas', 'Acesso às funções novas do Protheus'])}`,
       lado: `<h3>O risco das customizações</h3><p>Rotinas em ADVPL feitas fora do padrão costumam quebrar na troca de release. Por isso o inventário das customizações é o primeiro passo do projeto.</p><a class="btn btn--ciano" href="#contato">Avaliar meu ambiente</a>` },
     { tipo: 'passos', olho: 'Como fazemos', titulo: 'Atualização em cinco etapas.',
@@ -334,7 +334,7 @@ ${lista(['<b>Atualização do sistema</b>, para receber as regras novas da TOTVS
       html: `<p>A TOTVS nasceu em 1983 como Microsiga e hoje é a maior fabricante brasileira de software de gestão. Entre os sistemas dela estão o Protheus, usado por indústrias, distribuidores e empresas de serviço, o RM, forte em RH e educação, e plataformas como o Fluig.</p>
 <p>Boa parte da implantação e do suporte desses sistemas é feita por parceiros. Parte deles passa pela homologação da TOTVS e se torna canal oficial; outros trabalham por conta própria, sem vínculo com a fabricante.</p>`,
       lado: `<h3>ASR Consult</h3><p>Canal homologado TOTVS desde 2008, com +480 projetos entregues e +40 consultores sêniores.</p><a class="btn btn--ciano" href="quem-somos.html">Conhecer a ASR</a>` },
-    { tipo: 'cards', escuro: true, olho: 'O que muda', titulo: 'O que o cliente ganha com um canal homologado.', intro: 'Pontos práticos, que aparecem no dia a dia do ERP.',
+    { tipo: 'cards', escuro: true, olho: 'O que muda', titulo: 'O que o cliente ganha com um canal homologado.', intro: 'O que muda no dia a dia do ERP.',
       itens: [
         ['Metodologia TOTVS', 'Implantação e suporte seguem as boas práticas da fabricante, e não um jeito próprio de cada consultor.'],
         ['Customização dentro do padrão', 'Desenvolvimentos em ADVPL seguem as regras da TOTVS e atravessam as trocas de release sem quebrar.'],
@@ -345,7 +345,7 @@ ${lista(['<b>Atualização do sistema</b>, para receber as regras novas da TOTVS
       ] },
     { tipo: 'texto', olho: 'O risco', titulo: 'O que acontece quando o parceiro não segue o padrão.',
       html: `<p>Os problemas costumam aparecer só depois. Customizações feitas fora do padrão impedem ou encarecem a troca de release. Sem documentação, cada novo consultor precisa redescobrir o ambiente. E sem um canal com a TOTVS, um erro do produto fica sem dono.</p>
-<p>A ASR recebe com frequência ambientes nessa situação. O caso da Procisa, cliente há 8 anos, inclui a recuperação completa do ambiente depois de um ataque cibernético.</p>`,
+<p>Quando assume um ambiente assim, a ASR começa pelo inventário das customizações e documenta o que encontrar antes de mexer.</p>`,
       lado: `<h3>Antes de contratar, pergunte</h3>${lista(['A consultoria é canal homologado TOTVS?', 'O SLA está no contrato?', 'Quem atende tem experiência no meu módulo?', 'As entregas vêm documentadas?'])}` },
     { tipo: 'faq', itens: [
       ['O que é um canal homologado TOTVS?', 'É um parceiro aprovado pela TOTVS para vender serviços sobre os sistemas dela, como implantação, suporte e treinamento, seguindo a metodologia da fabricante.'],
@@ -367,7 +367,7 @@ ${lista(['<b>Atualização do sistema</b>, para receber as regras novas da TOTVS
   fatos: [['Linguagem', 'ADVPL'], ['Entregas', 'Rotinas, relatórios e integrações'], ['Padrão', 'Documentação TOTVS'], ['Equipe', 'Desenvolvedores sêniores']],
   blocos: [
     { tipo: 'texto', olho: 'Fábrica de software', titulo: 'Desenvolvimento para processos únicos.',
-      html: `<p>Todo Protheus tem pontos em que o padrão não atende: uma regra comercial própria, um relatório que a diretoria pede, uma integração com um sistema que só a sua empresa usa. É aí que entra o desenvolvimento em ADVPL, a linguagem do Protheus.</p>
+      html: `<p>Todo Protheus tem pontos em que o padrão não atende: uma regra comercial própria, um relatório que a diretoria pede, uma integração com um sistema que só a sua empresa usa. Nesses casos, a ASR desenvolve em ADVPL, a linguagem do Protheus.</p>
 <p>O time técnico da ASR desenvolve dentro das regras da TOTVS, usando pontos de entrada e as estruturas previstas pelo sistema. Assim a customização continua funcionando quando o Protheus é atualizado.</p>
 ${lista(['Rotinas e telas novas no Protheus', 'Relatórios e consultas sob medida', 'Integrações com outros sistemas', 'Automação de processos repetitivos', 'Revisão e correção de customizações antigas', 'Entregas rápidas e documentadas'])}`,
       lado: `<h3>Cases</h3><p>Automação de processos de RH na Würth e automação do App Meu RH na Avacy.</p><a class="btn btn--ciano" href="#contato">Pedir uma estimativa</a>` },
@@ -398,7 +398,7 @@ ${lista(['Rotinas e telas novas no Protheus', 'Relatórios e consultas sob medid
   apoio: 'Bancos, ponto eletrônico, saúde ocupacional, coletores no estoque e outros sistemas trocando dados com o Protheus, sem digitação dupla.',
   fatos: [['Financeiro', 'DDA e PIX'], ['RH', 'e-Ponto e SOC'], ['Estoque', 'ACD Indústria 4.0'], ['Case', 'Integração Sênior na Iguá']],
   blocos: [
-    { tipo: 'texto', olho: 'Por que integrar', titulo: 'Cada digitação dupla é um erro esperando para acontecer.',
+    { tipo: 'texto', olho: 'Por que integrar', titulo: 'Onde a digitação dupla gera erro.',
       html: `<p>Quando o boleto do fornecedor é digitado de novo no financeiro, quando a batida de ponto é exportada em planilha para a folha ou quando o estoque é contado no papel, o erro aparece no fechamento. A integração tira essas passagens manuais do caminho.</p>
 <p>A ASR integra o Protheus usando as ferramentas previstas pela TOTVS, como APIs e rotinas em ADVPL, e documenta cada integração para que ela continue funcionando nas próximas atualizações.</p>`,
       lado: `<h3>Case Iguá</h3><p>Implantação do eSocial, projeto de estoque com ACD e integração do Protheus com o sistema Sênior. Mais de 3 mil chamados atendidos.</p><a class="btn btn--ciano" href="#contato">Falar sobre integração</a>` },
@@ -427,16 +427,16 @@ ${lista(['Rotinas e telas novas no Protheus', 'Relatórios e consultas sob medid
 {
   slug: 'power-bi-protheus', menu: 'Power BI', servico: 'Power BI com TOTVS Protheus',
   titulo: 'Power BI com Protheus: painéis de gestão com os dados do ERP | ASR Consult',
-  descricao: 'Integração do Power BI com o TOTVS Protheus: dashboards personalizados de vendas, financeiro, estoque e RH, análises self-service e menos risco com planilhas soltas.',
+  descricao: 'Integração do Power BI com o TOTVS Protheus: painéis de vendas, financeiro, estoque e RH lendo o ERP direto, sem planilhas soltas.',
   olho: 'Power BI e Protheus',
   h1: 'Power BI com os dados do Protheus, <em>sem planilha no meio.</em>',
-  apoio: 'Dashboards personalizados que leem o ERP, para a diretoria e os gestores decidirem com o número de hoje.',
-  fatos: [['Fonte', 'Base do Protheus'], ['Painéis', 'Vendas, financeiro, estoque e RH'], ['Uso', 'Self-service por área'], ['Segurança', 'Acesso por perfil']],
+  apoio: 'Painéis que leem o ERP, para a diretoria e os gestores decidirem com o número de hoje.',
+  fatos: [['Fonte', 'Base do Protheus'], ['Painéis', 'Vendas, financeiro, estoque e RH'], ['Uso', 'Cada área no seu painel'], ['Segurança', 'Acesso por perfil']],
   blocos: [
-    { tipo: 'texto', olho: 'O que muda', titulo: 'Dados do ERP viram decisão.',
+    { tipo: 'texto', olho: 'O que muda', titulo: 'O número da reunião vem direto do ERP.',
       html: `<p>Em muitas empresas, o relatório de gestão nasce de uma exportação do Protheus para o Excel, passa por várias mãos e chega à diretoria dias depois, com números que ninguém sabe de onde vieram. O Power BI conectado ao ERP acaba com essa etapa.</p>
 <p>A ASR conecta o Power BI à base do Protheus, organiza os dados em modelos por área e monta os painéis com os gestores. Cada área consulta o próprio painel, com acesso controlado por perfil.</p>
-${lista(['Transforma dados em vantagem competitiva', 'Reduz custos e riscos de segurança com planilhas soltas', 'Análises self-service em escala corporativa', 'Dashboards personalizados para encontrar novas oportunidades'])}`,
+${lista(['Indicadores atualizados sem exportar planilha', 'Menos risco de vazamento com planilhas circulando por e-mail', 'Cada área consulta os próprios números sem pedir relatório à TI', 'Painéis montados a partir das perguntas de cada gestor'])}`,
       lado: `<h3>Painéis comuns</h3><p>Faturamento e margem, contas a pagar e receber, giro de estoque, indicadores de RH e produtividade do suporte.</p><a class="btn btn--ciano" href="#contato">Montar meu painel</a>` },
     { tipo: 'passos', olho: 'Como funciona', titulo: 'Do dado no ERP ao painel na reunião.',
       itens: [
@@ -480,7 +480,7 @@ ${lista(['Transforma dados em vantagem competitiva', 'Reduz custos e riscos de s
     { tipo: 'faq', itens: [
       ['A ASR dá cursos da Universidade TOTVS?', 'Sim. Como canal homologado, a ASR oferece treinamento pela Universidade TOTVS, além de turmas customizadas.'],
       ['O treinamento pode usar os dados da minha empresa?', 'Sim. Nas turmas customizadas, os exercícios usam os processos e cadastros da própria empresa, em ambiente de teste.'],
-      ['Tem treinamento no Configurador de Tributos?', 'Sim. É um dos treinamentos mais procurados por causa da reforma tributária.'],
+      ['Tem treinamento no Configurador de Tributos?', 'Sim. O time fiscal aprende a manter as regras de CBS e IBS a cada fase da reforma.'],
     ] },
   ],
   relacionados: ['implantacao-protheus', 'reforma-tributaria-protheus', 'consultoria-homologada-totvs'],

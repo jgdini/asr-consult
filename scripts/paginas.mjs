@@ -174,7 +174,7 @@ ${b.itens.map(([t, p], i) => `      <li class="sobe" style="--i:${i % 3}"><b>${t
     </ol>
   </div>
 </section>`; },
-  faq: b => { const [id, c] = cabeca('Perguntas frequentes', 'Dúvidas comuns.', ''); return `<section class="secao claro" id="faq" aria-labelledby="${id}">
+  faq: b => { const [id, c] = cabeca('Perguntas frequentes', b.titulo || 'Perguntas sobre ' + (/^(Alocação|Atualização|Consultoria|Desenvolvimento|Implantação|Integração|Projetos|Reforma|Suporte|Sustentação|Treinamento|Canal)/.test(atual.menu) ? atual.menu[0].toLowerCase() + atual.menu.slice(1) : atual.menu) + '.', ''); return `<section class="secao claro" id="faq" aria-labelledby="${id}">
   <div class="wrap">
     ${c}
     <div class="faq">
@@ -189,7 +189,7 @@ const relacionados = p => !p.relacionados ? '' : `<section class="secao escuro" 
   <div class="wrap">
     <div class="secao__cabeca"><div><span class="olho mono">Veja também</span><h2 id="t-rel" class="palavras" style="margin-top:14px">Serviços relacionados.</h2></div><p><a href="servicos.html" style="color:var(--ciano)">Ver todos os serviços</a></p></div>
     <div class="solucoes">
-${p.relacionados.map((s, i) => { const r = porSlug[s]; return `      <a class="solucao sobe" style="--i:${i}" href="${s}.html"><span class="mono">${String(i + 1).padStart(2, '0')}</span><b>${r.menu}</b><span>${semTag(r.apoio).split('. ')[0]}.</span></a>`; }).join('\n')}
+${p.relacionados.map((s, i) => { const r = porSlug[s]; return `      <a class="solucao sobe" style="--i:${i}" href="${s}.html"><span class="mono">${String(i + 1).padStart(2, '0')}</span><b>${r.menu}</b><span>${semTag(r.apoio).split('. ')[0].replace(/\.$/, '')}.</span></a>`; }).join('\n')}
     </div>
   </div>
 </section>`;
@@ -280,7 +280,9 @@ ${flutuantes}${script}
 `;
 };
 
+let atual = {};
 for (const p of paginas) {
+  atual = p;
   const corpo = p.blocos.map(b => blocos[b.tipo](b)).join('\n\n') + '\n\n' + relacionados(p);
   writeFileSync(p.slug + '.html', pagina(p, corpo));
 }
@@ -289,7 +291,7 @@ for (const p of paginas) {
 const cardsHub = paginas.filter(p => p.servico).map((p, i) => `      <a class="servico sobe" style="--i:${i % 3}" href="${p.slug}.html"><span class="mono">${String(i + 1).padStart(2, '0')}</span><h3>${p.menu}</h3><p>${p.apoio}</p><span class="servico__mais">Saiba mais ${seta}</span></a>`).join('\n');
 writeFileSync('servicos.html', pagina(hub, `<section class="secao claro" aria-labelledby="t-lista">
   <div class="wrap">
-    <div class="secao__cabeca"><div><span class="olho mono">Frentes de atuação</span><h2 id="t-lista" class="palavras" style="margin-top:14px">Integramos tecnologia, processos e estratégia.</h2></div><p>Cada serviço pode ser contratado como projeto de horas fechadas, banco de horas (AMS) ou sustentação com SLA em contrato. <a href="projeto-horas-fechadas.html" style="color:var(--roxo-escuro);font-weight:600">Compare os modelos</a>.</p></div>
+    <div class="secao__cabeca"><div><span class="olho mono">Frentes de atuação</span><h2 id="t-lista" class="palavras" style="margin-top:14px">Escolha pelo problema que você tem hoje.</h2></div><p>Cada serviço pode ser contratado como projeto de horas fechadas, banco de horas (AMS) ou sustentação com SLA em contrato. <a href="projeto-horas-fechadas.html" style="color:var(--roxo-escuro);font-weight:600">Compare os modelos</a>.</p></div>
     <div class="servicos">
 ${cardsHub}
     </div>
