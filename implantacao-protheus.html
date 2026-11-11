@@ -110,6 +110,32 @@ h2 { font-size: clamp(1.8rem, 4.6vw, 3rem); }
 .modulo b { display: block; font-weight: 600; font-size: .95rem; color: var(--branco); }
 .modulo span { display: block; margin-top: 4px; color: var(--texto-e2); font-size: .66rem; }
 .modulo::after { content: ""; position: absolute; top: 18px; right: 18px; width: 7px; height: 7px; border-radius: 50%; background: var(--ciano); box-shadow: 0 0 0 0 rgba(0,219,255,.6); }
+/* Rede viva do hero */
+.painel__status { display: inline-flex; align-items: center; gap: 8px; color: var(--texto-e2); }
+.painel__status i { width: 7px; height: 7px; border-radius: 50%; background: #3EE08F; }
+.rv { position: relative; aspect-ratio: 4 / 3; background-image: radial-gradient(rgba(150,175,240,.16) 1px, transparent 1px); background-size: 18px 18px; }
+.rv__linhas { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.liga { fill: none; stroke: rgba(150,175,240,.2); stroke-width: 1.2; transition: stroke .5s, stroke-width .5s; }
+.liga.ativa { stroke: rgba(0,219,255,.65); stroke-width: 1.6; }
+.pulso { fill: var(--ciano); }
+.pulso--rastro { fill: rgba(0,219,255,.35); }
+.nucleo { position: absolute; left: 50%; top: 50%; width: 84px; height: 84px; transform: translate(-50%, -50%); border-radius: 50%; display: grid; place-items: center; background: var(--grad-roxo); color: var(--branco); font-weight: 700; font-size: .82rem; letter-spacing: -.01em; border: 1px solid rgba(255,255,255,.25); }
+.nucleo::before, .nucleo::after { content: ""; position: absolute; inset: -1px; border-radius: 50%; border: 1px solid rgba(164,77,255,.55); opacity: 0; }
+.nucleo span { position: relative; z-index: 1; }
+.no { position: absolute; transform: translate(-50%, -50%); padding: 6px 11px; border-radius: 999px; background: var(--n850); border: 1px solid var(--linha-e2); color: var(--texto-e); font-size: .74rem; font-weight: 600; white-space: nowrap; transition: background .35s, border-color .35s, color .35s, transform .35s var(--ease); }
+.no.pisca { background: var(--grad-roxo); border-color: var(--ciano); color: var(--branco); transform: translate(-50%, -50%) scale(1.08); }
+.eventos { list-style: none; margin: 0; padding: 10px 18px 12px; height: 104px; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px; overflow: hidden; border-top: 1px solid var(--linha-e); background: rgba(4,11,34,.55); font-family: "Plex Mono", ui-monospace, monospace; font-size: .74rem; }
+.eventos li { display: grid; grid-template-columns: auto auto 1fr auto; gap: 10px; align-items: center; min-height: 24px; color: var(--texto-e2); white-space: nowrap; transition: opacity .4s, transform .4s var(--ease); }
+.eventos li.entra { opacity: 0; transform: translateY(8px); }
+.eventos .ev__mod { color: var(--ciano); }
+.eventos .ev__txt { overflow: hidden; text-overflow: ellipsis; color: var(--texto-e); }
+.eventos .ev__ok { color: #3EE08F; }
+@media (prefers-reduced-motion: no-preference) {
+  .nucleo::before { animation: onda 2.8s ease-out infinite; }
+  .nucleo::after { animation: onda 2.8s ease-out 1.4s infinite; }
+}
+@keyframes onda { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(1.9); opacity: 0; } }
+@media (max-width: 479px) { .no { padding: 5px 9px; font-size: .7rem; } .nucleo { width: 70px; height: 70px; font-size: .74rem; } .eventos .ev__hora { display: none; } .eventos li { grid-template-columns: auto 1fr auto; } }
 .painel__rodape { display: flex; align-items: center; gap: 10px; padding: 14px 18px; border-top: 1px solid var(--linha-e); color: var(--texto-e2); }
 .painel__rodape i { width: 7px; height: 7px; border-radius: 50%; background: #3EE08F; flex: none; }
 
@@ -843,6 +869,74 @@ form.enviado .form__ok { display: block; }
     }
   }
 
+
+  // Rede viva do hero: pulso sai do Protheus (ou chega nele) e gera um evento na faixa
+  (function () {
+  var reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var rede = document.getElementById('rede'), lista = document.getElementById('eventos');
+  if (rede && lista) {
+    var EV = {
+      fiscal: ['NF-e 4.512 autorizada', 'NFS-e transmitida', 'CBS e IBS calculados na nota'],
+      financeiro: ['Conciliação bancária concluída', '38 títulos baixados via PIX'],
+      bancos: ['DDA: 12 boletos importados', 'Extrato do dia conciliado'],
+      powerbi: ['Painel de vendas atualizado', 'Indicadores do mês recalculados'],
+      estoque: ['Inventário ACD sincronizado', 'Ordem de produção 1.207 apontada'],
+      fluig: ['Pedido de compra aprovado', 'Admissão aprovada pelo gestor'],
+      soc: ['Exame ocupacional integrado', 'Evento de SST enviado'],
+      rh: ['Folha de pagamento calculada', 'eSocial S-1200 enviado']
+    };
+    var NOME = { fiscal: 'Fiscal', financeiro: 'Financeiro', bancos: 'Bancos', powerbi: 'Power BI', estoque: 'Estoque', fluig: 'Fluig', soc: 'SOC', rh: 'RH' };
+    var linhasR = {}, nosR = {};
+    rede.querySelectorAll('.liga').forEach(function (p) { linhasR[p.getAttribute('data-k')] = p; });
+    rede.querySelectorAll('.no').forEach(function (n) { nosR[n.getAttribute('data-k')] = n; });
+    var chaves = Object.keys(linhasR), grupo = document.getElementById('pulsos'), ns = 'http://www.w3.org/2000/svg';
+    var hora = function () { var d = new Date(); return [d.getHours(), d.getMinutes(), d.getSeconds()].map(function (n) { return n < 10 ? '0' + n : n; }).join(':'); };
+    var conta = {};
+    var evento = function (k, anima) {
+      var txts = EV[k]; conta[k] = ((conta[k] || 0) + 1) % txts.length;
+      var li = document.createElement('li');
+      li.innerHTML = '<span class="ev__hora"></span><span class="ev__mod"></span><span class="ev__txt"></span><span class="ev__ok">✓</span>';
+      li.children[0].textContent = hora(); li.children[1].textContent = NOME[k]; li.children[2].textContent = txts[conta[k]];
+      if (anima) li.className = 'entra';
+      lista.appendChild(li);
+      if (anima) requestAnimationFrame(function () { requestAnimationFrame(function () { li.className = ''; }); });
+      while (lista.children.length > 4) lista.removeChild(lista.firstChild);
+    };
+    var ultimo = null, ativos = [];
+    var dispara = function () {
+      var k; do { k = chaves[Math.floor(Math.random() * chaves.length)]; } while (k === ultimo); ultimo = k;
+      var p = linhasR[k], L = p.getTotalLength(), sai = Math.random() < .6;
+      var c = document.createElementNS(ns, 'circle'); c.setAttribute('r', '3.4'); c.setAttribute('class', 'pulso');
+      var r = document.createElementNS(ns, 'circle'); r.setAttribute('r', '2.2'); r.setAttribute('class', 'pulso pulso--rastro');
+      grupo.appendChild(r); grupo.appendChild(c); p.classList.add('ativa');
+      ativos.push({ k: k, p: p, L: L, sai: sai, c: c, r: r, t0: performance.now() });
+      if (ativos.length === 1) requestAnimationFrame(passo);
+    };
+    var DUR = 1150;
+    var passo = function (agora) {
+      ativos = ativos.filter(function (a) {
+        var u = Math.min(1, (agora - a.t0) / DUR), e = u < .5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2;
+        var f = a.sai ? e : 1 - e, f2 = a.sai ? Math.max(0, e - .08) : Math.min(1, 1 - e + .08);
+        var pt = a.p.getPointAtLength(f * a.L), pt2 = a.p.getPointAtLength(f2 * a.L);
+        a.c.setAttribute('cx', pt.x); a.c.setAttribute('cy', pt.y); a.r.setAttribute('cx', pt2.x); a.r.setAttribute('cy', pt2.y);
+        if (u < 1) return true;
+        a.c.remove(); a.r.remove(); a.p.classList.remove('ativa');
+        var no = nosR[a.k]; no.classList.add('pisca'); setTimeout(function () { no.classList.remove('pisca'); }, 650);
+        evento(a.k, true);
+        return false;
+      });
+      if (ativos.length) requestAnimationFrame(passo);
+    };
+    ['fiscal', 'rh', 'financeiro'].forEach(function (k) { evento(k, false); });
+    if (!reduz) {
+      var relogio = null, visivel = false;
+      var liga = function () { if (!relogio && visivel && !document.hidden) { dispara(); relogio = setInterval(dispara, 1500); } };
+      var desliga = function () { if (relogio) { clearInterval(relogio); relogio = null; } };
+      new IntersectionObserver(function (es) { visivel = es[0].isIntersecting; visivel ? liga() : desliga(); }, { threshold: .2 }).observe(rede);
+      document.addEventListener('visibilitychange', function () { document.hidden ? desliga() : liga(); });
+    }
+  }
+  })();
 
   // Menu do celular
   var mb = document.querySelector('.menu-btn'), mm = document.getElementById('menu-movel');
