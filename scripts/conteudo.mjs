@@ -99,7 +99,6 @@ export const paginas = [
   </div>
 </section>` },
     { tipo: 'faq', titulo: 'Perguntas sobre a ASR.', itens: [
-      ['Quem fundou a ASR Consult?', 'A ASR foi fundada em 2008 por Rodrigo Miranda Silvestre, hoje diretor executivo, e pela sócia Andreia. Rodrigo tem mais de 20 anos de carreira em tecnologia, com passagens pela coordenação de TI em operações de clientes como Itaú Unibanco e Pernambucanas.'],
       ['A ASR Consult é parceira oficial da TOTVS?', 'Sim. A ASR é canal homologado TOTVS desde 2008, o que permite implantar, dar suporte e treinar equipes nos sistemas da TOTVS com a metodologia e os treinamentos oficiais da fabricante.'],
       ['Onde fica a ASR e quais regiões ela atende?', 'A sede fica na Rua da Mooca, 4415, em São Paulo (SP). A ASR atende clientes em 11 estados, com atendimento remoto e visitas quando o projeto pede.'],
       ['Quais sistemas TOTVS a ASR atende?', 'Protheus e RM, em todos os módulos: recursos humanos, fiscal e financeiro, contabilidade, compras, estoque e custos, qualidade, exportação e importação, GFE, WMS e TMS.'],
