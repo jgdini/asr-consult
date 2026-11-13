@@ -108,6 +108,12 @@ const cssInterno = `
 .case__num { display: block; margin-top: 14px; font-size: 2rem; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; color: var(--roxo-escuro); }
 .case__num small { font-size: .8rem; font-weight: 600; letter-spacing: 0; color: var(--tinta-2); }
 .case p { margin: 10px 0 0; color: var(--tinta-2); font-size: .93rem; }
+.logos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.logos li { display: grid; place-items: center; height: 110px; padding: 18px 22px; border-radius: 14px; background: var(--branco); border: 1px solid var(--linha-c); }
+.logos img { width: auto; height: auto; max-width: 100%; max-height: 64px; object-fit: contain; }
+.case--destaque { margin-top: 14px; display: grid; gap: 8px; }
+.case--destaque h3 { font-size: 1.3rem; }
+@media (min-width: 640px) { .logos { grid-template-columns: repeat(4, 1fr); } }
 .clientes__titulo { margin: 56px 0 18px; font-size: 1.2rem; }
 .clientes { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .clientes--escuro { margin: 22px 0 6px; }
@@ -219,7 +225,7 @@ const schema = p => {
   if (p.servico) g.push({ '@type': 'Service', name: p.servico, serviceType: p.servico, description: p.descricao, provider: org, areaServed: { '@type': 'Country', name: 'Brasil' }, url });
   if (p.slug === 'quem-somos') {
     g[0]['@type'] = 'AboutPage';
-    g.push({ ...org, sameAs: ['https://www.linkedin.com/company/asrconsult', 'https://www.instagram.com/asrconsultoficialtotvs/', 'https://www.facebook.com/totvsasrconsultoficial/', 'https://portalerp.com/br/empresa/asr-consult'], foundingDate: '2008', telephone: '+55-11-97996-7825', address: { '@type': 'PostalAddress', streetAddress: 'Rua da Mooca, 4415', addressLocality: 'São Paulo', addressRegion: 'SP', postalCode: '03165-003', addressCountry: 'BR' }, numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 40 }, founder: [{ '@type': 'Person', name: 'Rodrigo Miranda Silvestre', jobTitle: 'Diretor executivo', image: BASE + 'assets/img/rodrigo-silvestre-720.webp', email: 'rodrigo.silvestre@asrconsult.com.br', sameAs: 'https://www.linkedin.com/in/rodrigo-miranda-silvestre/' }, { '@type': 'Person', name: 'Andreia' }] });
+    g.push({ ...org, sameAs: ['https://www.linkedin.com/company/asrconsulthomologadatotvs/', 'https://www.instagram.com/asrconsultoficialtotvs/', 'https://www.facebook.com/totvsasrconsultoficial/', 'https://portalerp.com/br/empresa/asr-consult'], foundingDate: '2008', telephone: '+55-11-97996-7825', address: { '@type': 'PostalAddress', streetAddress: 'Rua da Mooca, 4415', addressLocality: 'São Paulo', addressRegion: 'SP', postalCode: '03165-003', addressCountry: 'BR' }, numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 40 }, employee: [{ '@type': 'Person', name: 'Rodrigo Miranda Silvestre', jobTitle: 'Diretor executivo', image: BASE + 'assets/img/rodrigo-silvestre-720.webp', email: 'rodrigo.silvestre@asrconsult.com.br', sameAs: 'https://www.linkedin.com/in/rodrigo-miranda-silvestre/' }] });
   }
   const faq = (p.blocos || []).find(b => b.tipo === 'faq');
   if (faq) g.push({ '@type': 'FAQPage', mainEntity: faq.itens.map(([q, r]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: r } })) });
@@ -270,8 +276,8 @@ ${cabecalho}
       <h1 id="titulo">${p.h1}</h1>
       <p class="hero__apoio">${p.apoio}</p>
       <div class="hero__acoes">
-        <a class="btn btn--ciano" href="#contato">Falar com um especialista ${seta}</a>
-        <a class="btn btn--linha" href="https://wa.me/5511979967825" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="btn btn--ciano" href="https://wa.me/5511979967825?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener">Falar com um especialista ${seta}</a>
+        <a class="btn btn--linha" href="https://wa.me/5511979967825?text=Ol%C3%A1%2C%20vim%20pelo%20site." target="_blank" rel="noopener">Chamar no WhatsApp</a>
       </div>
     </div>
     ${fatos}

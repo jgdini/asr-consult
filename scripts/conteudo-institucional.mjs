@@ -22,7 +22,7 @@ export const institucional = [
     <div class="texto">
       <span class="olho mono">Quem procuramos</span>
       <h2 id="t-vagas" class="palavras">Áreas em que a ASR contrata.</h2>
-      <p>A ASR trabalha com projetos de implantação, sustentação com SLA em contrato e desenvolvimento em ADVPL. Quem entra no time atende clientes como Habib's, Würth e Bauminas e trabalha com consultores que estão no Protheus há muitos anos.</p>
+      <p>A ASR trabalha com projetos de implantação, sustentação com SLA em contrato e desenvolvimento em ADVPL. Quem entra no time atende clientes como Würth, Lanza Pharma e Pizzimenti e trabalha com consultores que estão no Protheus há muitos anos.</p>
       <ul class="lista-ok">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Consultoria funcional:</b> fiscal, financeiro, RH e folha, estoque, compras e PCP.</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Desenvolvimento:</b> ADVPL, integrações e Power BI.</span></li>

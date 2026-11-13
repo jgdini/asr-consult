@@ -93,7 +93,7 @@ ${lista(['Emissão da NFS-e a partir do faturamento do Protheus', 'Transmissão 
       html: `<p>A EFD-Reinf é a escrituração digital das retenções e de outras informações fiscais que não estão no eSocial: serviços tomados e prestados com retenção de INSS, retenções de IR, PIS, Cofins e CSLL, receitas de eventos esportivos, entre outras. Ela é enviada todo mês e, junto com o eSocial, substituiu a DIRF.</p>
 <p>No Protheus, a Reinf nasce dos lançamentos do dia a dia: notas de entrada e de saída, títulos a pagar e retenções. Se esses dados estão errados na origem, o erro chega à Receita. Por isso a implantação começa pelos cadastros e pelas regras de retenção.</p>
 ${lista(['Eventos de serviços tomados e prestados com retenção', 'Eventos de retenções de IR, PIS, Cofins e CSLL', 'Fechamento e reabertura do período', 'Conferência dos valores com o financeiro e o fiscal', 'Integração com o eSocial, que usa os mesmos cadastros'])}`,
-      lado: `<h3>Case Iguá e Procisa</h3><p>A ASR implantou o eSocial na Iguá e na Procisa. A Reinf usa a mesma base de cadastros do eSocial.</p><a class="btn btn--ciano" href="#contato">Falar sobre a Reinf</a>` },
+      lado: `<h3>eSocial e Reinf juntos</h3><p>A Reinf usa a mesma base de cadastros do eSocial. A ASR implanta e revisa os dois no mesmo projeto, como fez na Würth.</p><a class="btn btn--ciano" href="#contato">Falar sobre a Reinf</a>` },
     { tipo: 'passos', olho: 'Como implantamos', titulo: 'Da retenção certa ao evento transmitido.',
       itens: [
         ['Diagnóstico', 'Leitura das retenções feitas hoje e dos cadastros de fornecedores, clientes e naturezas.'],

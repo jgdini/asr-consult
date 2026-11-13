@@ -23,34 +23,33 @@ export const paginas = [
   blocos: [
     { tipo: 'numeros', itens: [['480', '+', 'Projetos entregues desde 2008'], ['35000', '+', 'Atendimentos por ano'], ['40', '+', 'Consultores sêniores'], ['11', '', 'Estados atendidos']] },
     { tipo: 'texto', olho: 'Nossa história', titulo: 'Uma consultoria criada para cuidar do ERP depois que ele entra no ar.',
-      html: `<p>Fundada por Rodrigo Silvestre e pela sócia Andreia, a ASR começou em 2008 implantando TOTVS Protheus e, com os anos, passou a cuidar do que vem depois da implantação: o suporte do dia a dia, as atualizações de release, as mudanças da legislação e o desenvolvimento do que o sistema padrão não cobre.</p>
+      html: `<p>A ASR começou em 2008 implantando TOTVS Protheus e, com os anos, passou a cuidar do que vem depois da implantação: o suporte do dia a dia, as atualizações de release, as mudanças da legislação e o desenvolvimento do que o sistema padrão não cobre.</p>
 <p>Hoje a ASR atende indústrias, distribuidores, redes de varejo e empresas de serviço em 11 estados. A equipe tem mais de 40 consultores, todos sêniores, com especialistas em cada módulo do Protheus e do RM.</p>
 <p>O modelo de trabalho tem três compromissos que o cliente consegue conferir: o SLA de sustentação escrito em contrato, com mínimo de 85% todo mês; o Book de Atendimento, um relatório mensal com as causas dos chamados e os planos de ação; e a documentação no padrão TOTVS em toda entrega.</p>`,
-      lado: `<h3>Cases em números</h3><dl class="fatos-lista"><div><dt>Projetos para a Bauminas em 2024</dt><dd>+108</dd></div><div><dt>Lojas do Habib's migradas</dt><dd>+270</dd></div><div><dt>Anos de parceria com a Procisa</dt><dd>8</dd></div></dl><a class="btn btn--ciano" href="#cases">Ver os cases</a>` },
+      lado: `<h3>Em números</h3><dl class="fatos-lista"><div><dt>Projetos entregues desde 2008</dt><dd>+480</dd></div><div><dt>Atendimentos por ano</dt><dd>+35 mil</dd></div><div><dt>Consultores sêniores</dt><dd>+40</dd></div></dl><a class="btn btn--ciano" href="#clientes">Ver clientes</a>` },
     { tipo: 'html', html: `<section class="secao escuro" id="rodrigo" aria-labelledby="t-rodrigo">
   <div class="wrap pessoa">
     <figure class="pessoa__foto">
-      <img src="assets/img/rodrigo-silvestre-720.webp" srcset="assets/img/rodrigo-silvestre-420.webp 420w, assets/img/rodrigo-silvestre-720.webp 720w" sizes="(min-width: 1000px) 420px, 92vw" width="720" height="900" alt="Rodrigo Silvestre, diretor executivo e sócio-fundador da ASR Consult" loading="lazy" decoding="async">
+      <img src="assets/img/rodrigo-silvestre-720.webp" srcset="assets/img/rodrigo-silvestre-420.webp 420w, assets/img/rodrigo-silvestre-720.webp 720w" sizes="(min-width: 1000px) 420px, 92vw" width="720" height="900" alt="Rodrigo Silvestre, diretor executivo da ASR Consult" loading="lazy" decoding="async">
       <figcaption class="mono">Rodrigo Silvestre · ASR Consult</figcaption>
     </figure>
     <div>
       <span class="olho mono">Quem lidera</span>
       <h2 id="t-rodrigo" class="palavras" style="margin-top:14px">Rodrigo Silvestre</h2>
-      <p class="pessoa__cargo mono">Diretor executivo e sócio-fundador · ASR Consult</p>
-      <p>Rodrigo Miranda Silvestre fundou a ASR Consult em 2008 com a sócia Andreia e tem mais de 20 anos de carreira em tecnologia. Nesse caminho, foi líder de equipe, coordenador de TI e líder de suporte VIP em operações de grande porte, sempre com SLA de cliente para cumprir.</p>
+      <p class="pessoa__cargo mono">Diretor executivo · ASR Consult</p>
+      <p>Rodrigo Miranda Silvestre impulsionou o crescimento da ASR Consult a partir de 2018, trazendo novos resultados, como o fortalecimento da marca, faturamento expressivo e a expansão dos serviços em nível nacional. Tem mais de 20 anos de carreira em tecnologia e, nesse caminho, foi líder de equipe, coordenador de TI e líder de suporte VIP em operações de grande porte, sempre com SLA de cliente para cumprir.</p>
       <p>Na carreira, trabalhou com empresas como Itaú Unibanco, Pernambucanas, Sodexo, TOTVS e Mr. Kitch. Na coordenação de TI da Sonda, atendendo a Pernambucanas em todo o país, recuperou o SLA em 42% no primeiro mês com a nova equipe de campo e manteve 99% de atingimento mensal.</p>
       <p>Hoje, como diretor executivo, é responsável pela estratégia comercial e pelas relações diretas e indiretas com os clientes. Com grande experiência em gestão de equipes, contribui para a criação de novos processos e para os contratos com parceiros. Foram anos sendo cobrado por SLA do lado do prestador de serviço, e é daí que vêm o SLA no contrato e o Book de Atendimento da ASR.</p>
       <ul class="clientes clientes--escuro" aria-label="Empresas na carreira do Rodrigo"><li>Itaú Unibanco</li><li>Pernambucanas</li><li>Sodexo</li><li>TOTVS</li><li>Mr. Kitch</li></ul>
       <ul class="trajetoria">
-        <li><b class="mono">2008</b><span>Funda a ASR Consult com a sócia Andreia.</span></li>
         <li><b class="mono">2010</b><span>Líder de equipe de suporte a campo na Spread Tecnologia, atendendo o Itaú Unibanco.</span></li>
         <li><b class="mono">2011</b><span>Analista de suporte na Itautec, no cliente Itaú Unibanco.</span></li>
         <li><b class="mono">2012</b><span>Coordenador de TI na Spread Tecnologia: field services e service desk para Itaú Unibanco e CVC.</span></li>
         <li><b class="mono">2015</b><span>Líder de suporte VIP na Globalweb, atendendo a diretoria da Suzano Papel e Celulose.</span></li>
         <li><b class="mono">2016</b><span>Coordenador de TI na Sonda, responsável pela operação da Pernambucanas em nível nacional.</span></li>
-        <li><b class="mono">2018</b><span>Passa a se dedicar só à ASR como diretor executivo, à frente da estratégia comercial, das finanças e das equipes de suporte e projetos.</span></li>
+        <li><b class="mono">Hoje</b><span>Diretor executivo da ASR Consult, à frente da estratégia comercial, das finanças e das equipes de suporte e projetos.</span></li>
       </ul>
-      <p class="pessoa__contato"><a class="btn btn--linha" href="https://www.linkedin.com/in/rodrigo-miranda-silvestre/" target="_blank" rel="noopener">LinkedIn do Rodrigo</a> <a class="btn btn--ciano" href="#contato">Falar com o Rodrigo</a></p>
+      <p class="pessoa__contato"><a class="btn btn--linha" href="https://www.linkedin.com/in/rodrigo-miranda-silvestre/" target="_blank" rel="noopener">LinkedIn do Rodrigo</a> <a class="btn btn--ciano" href="https://wa.me/5511979967825?text=Ol%C3%A1%2C%20Rodrigo!%20Vim%20pelo%20site%20e%20preciso%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Falar com o Rodrigo</a></p>
     </div>
   </div>
 </section>` },
@@ -63,23 +62,14 @@ export const paginas = [
         ['Documentação padrão TOTVS', 'Rastreabilidade e qualidade em todas as entregas, o que facilita as atualizações futuras.'],
         ['Canal homologado TOTVS', 'Parceiro oficial da TOTVS, com treinamentos da Universidade TOTVS e acesso aos canais técnicos da fabricante.'],
       ] },
-    { tipo: 'html', html: `<section class="secao claro" id="cases" aria-labelledby="t-cases" style="padding-top:0">
+    { tipo: 'html', html: `<section class="secao claro" id="clientes" aria-labelledby="t-clientes" style="padding-top:0">
   <div class="wrap">
     <div class="secao__cabeca">
-      <div><span class="olho mono">Cases</span><h2 id="t-cases" class="palavras" style="margin-top:14px">Projetos que estão no ar hoje.</h2></div>
-      <p>Alguns clientes que mantêm o Protheus com a ASR e o que foi feito em cada um.</p>
+      <div><span class="olho mono">Clientes</span><h2 id="t-clientes" class="palavras" style="margin-top:14px">Empresas que confiam o Protheus à ASR.</h2></div>
+      <p>Indústria, distribuição, farmacêutica, alimentos e construção. Clientes que mantêm o Protheus com a ASR.</p>
     </div>
-    <div class="cases">
-      <article class="case sobe" style="--i:0"><h3>Habib's</h3><b class="case__num">+270 <small>lojas migradas</small></b><p>Migração da rede e suporte completo ao RH.</p></article>
-      <article class="case sobe" style="--i:1"><h3>Bauminas</h3><b class="case__num">+108 <small>projetos em 2024</small></b><p>Mais de 5 mil chamados atendidos.</p></article>
-      <article class="case sobe" style="--i:2"><h3>Iguá</h3><b class="case__num">+3 mil <small>chamados atendidos</small></b><p>Implantação do eSocial, projeto de estoque com ACD e integração com o sistema Sênior.</p></article>
-      <article class="case sobe" style="--i:3"><h3>Procisa</h3><b class="case__num">8 anos <small>de parceria</small></b><p>Implantação do eSocial e recuperação do ambiente depois de um ataque cibernético.</p></article>
-      <article class="case sobe" style="--i:4"><h3>Würth</h3><p>Automação de processos de RH com soluções TOTVS, reestruturação de estoque, ACD, eSocial e projeto de release.</p></article>
-      <article class="case sobe" style="--i:5"><h3>Emplas</h3><p>Ganho de desempenho com os projetos de release, SQL, estoque e financeiro.</p></article>
-      <article class="case sobe" style="--i:6"><h3>Avacy</h3><p>Automação e implantação do App Meu RH.</p></article>
-    </div>
-    <h3 class="clientes__titulo">Empresas que confiam o Protheus à ASR</h3>
-    <ul class="clientes">${['Würth', 'FedEx', "Habib's", 'Ragazzo', 'Hexagon', 'SMC', 'Banco RCI Brasil', 'Colorobbia', 'Bunzl', 'Dimep', 'Tintas Killing', 'Bauminas', 'Iguá', 'Procisa', 'Emplas', 'Valoriza', 'Unagro', 'Hi-Lex', 'Injex', 'Alispec', 'Pensabio', 'Tubarão Saneamento', 'Alphaville Tênis Clube', 'Editora Santuário', 'Ormazabal', 'Hudson Store'].map(n => `<li>${n}</li>`).join('')}</ul>
+    <ul class="logos" aria-label="Clientes da ASR"><li><img src="assets/img/clientes/wurth.webp" width="280" height="60" alt="Würth" loading="lazy" decoding="async"></li><li><img src="assets/img/clientes/lanza-pharma.webp" width="280" height="105" alt="Lanza Pharma" loading="lazy" decoding="async"></li><li><img src="assets/img/clientes/grupo-doce-doce.webp" width="280" height="67" alt="Grupo Doce D&#39;ocê" loading="lazy" decoding="async"></li><li><img src="assets/img/clientes/pensalab.webp" width="280" height="87" alt="Pensalab" loading="lazy" decoding="async"></li><li><img src="assets/img/clientes/mc-group.webp" width="175" height="120" alt="MC Group Metalloys &amp; Chemicals" loading="lazy" decoding="async"></li><li><img src="assets/img/clientes/cliente-6f.webp" width="104" height="120" alt="Cliente 6F" loading="lazy" decoding="async"></li><li><img src="assets/img/clientes/protec.webp" width="228" height="120" alt="Protec" loading="lazy" decoding="async"></li><li><img src="assets/img/clientes/pizzimenti.webp" width="280" height="66" alt="Pizzimenti Produtos para Construção" loading="lazy" decoding="async"></li></ul>
+    <article class="case case--destaque sobe"><span class="olho mono">Case</span><h3>Würth</h3><p>Automação de processos de RH com soluções TOTVS, reestruturação de estoque, ACD, eSocial e projeto de release do Protheus.</p></article>
   </div>
 </section>` },
     { tipo: 'html', html: `<section class="secao claro" id="midia" aria-labelledby="t-midia2" style="padding-top:0">
@@ -93,7 +83,7 @@ export const paginas = [
       <a class="midia__item sobe" href="https://portalerp.com/br/noticias/asr-consult-destaca-erp-e-eficiencia-empresarial-no-erp-summit-2027" target="_blank" rel="noopener"><span class="midia__fonte mono">Portal ERP · out. 2026</span><b>ASR no ERP Summit 2027</b><p>A ASR confirmou presença nos 10 anos do ERP Summit Brasil para falar de implantação, suporte e evolução de sistemas de gestão.</p><span class="midia__ir">Ler no Portal ERP →</span></a>
       <a class="midia__item sobe" href="https://portalerp.com/br/institucional/asr-consult/asr-consult-participa-do-universo-totvs-2026-evento-voltado-a-tecnologia-e-a-inovacao-nos-negocios" target="_blank" rel="noopener"><span class="midia__fonte mono">Portal ERP · out. 2026</span><b>ASR no Universo TOTVS 2026</b><p>A ASR participou do evento da TOTVS em São Paulo, com Protheus, RM e Fluig.</p><span class="midia__ir">Ler no Portal ERP →</span></a>
       <a class="midia__item sobe" href="https://portalerp.com/br/institucional/asr-consult/asr-consult-celebra-conquista-de-meta-alcancada-em-parceria-com-a-totvs" target="_blank" rel="noopener"><span class="midia__fonte mono">Portal ERP · jul. 2026</span><b>Meta alcançada com a TOTVS</b><p>A ASR tocou o sino na sede da TOTVS, ritual que marca a meta atingida pelo parceiro.</p><span class="midia__ir">Ler no Portal ERP →</span></a>
-      <a class="midia__item sobe" href="https://portalerp.com/br/institucional/asr-consult/asr-consultoria-consolida-papel-estrategico-no-mercado-de-tecnologia-com-projetos-de-alta-complexidade-corporativa" target="_blank" rel="noopener"><span class="midia__fonte mono">Portal ERP · jun. 2026</span><b>Projetos de alta complexidade</b><p>Os cases da Procisa, Iguá, Habib's, Würth, Bauminas e Emplas contados pela ASR.</p><span class="midia__ir">Ler no Portal ERP →</span></a>
+      <a class="midia__item sobe" href="https://portalerp.com/br/institucional/asr-consult/asr-consultoria-consolida-papel-estrategico-no-mercado-de-tecnologia-com-projetos-de-alta-complexidade-corporativa" target="_blank" rel="noopener"><span class="midia__fonte mono">Portal ERP · jun. 2026</span><b>Projetos de alta complexidade</b><p>Matéria sobre o papel da ASR em projetos corporativos de alta complexidade.</p><span class="midia__ir">Ler no Portal ERP →</span></a>
       <a class="midia__item sobe" href="https://portalerp.com/br/empresa/asr-consult" target="_blank" rel="noopener"><span class="midia__fonte mono">Portal ERP · perfil</span><b>Perfil da ASR no Portal ERP</b><p>Ficha da ASR no maior portal de notícias de ERP do Brasil.</p><span class="midia__ir">Ler no Portal ERP →</span></a>
     </div>
   </div>
@@ -121,7 +111,7 @@ export const paginas = [
       html: `<p>Quem procura consultoria Protheus quase sempre já tem o sistema rodando. O problema aparece no dia a dia: o fechamento do mês leva dias, o fiscal ajusta nota na mão, o estoque do sistema não bate com o físico, ou cada área usa o ERP de um jeito.</p>
 <p>A consultoria da ASR começa olhando o processo e só depois o sistema. O consultor do módulo senta com a área, entende como o trabalho é feito, compara com o que o Protheus já oferece e propõe o ajuste: um parâmetro, um cadastro corrigido, um treinamento ou, quando o padrão não atende, um desenvolvimento em ADVPL.</p>
 ${lista(['Revisão de processos por área, com o usuário-chave junto', 'Ajuste de parâmetros e cadastros que geram retrabalho', 'Plano de ação priorizado, com prazo e responsável', 'Documentação no padrão TOTVS do que foi alterado'])}`,
-      lado: `<h3>Também atendemos RM</h3><p>Além do Protheus, a ASR atende o TOTVS RM, muito usado em RH, folha de pagamento e educação.</p><a class="btn btn--ciano" href="#contato">Falar com um consultor</a>` },
+      lado: `<h3>Também atendemos RM</h3><p>Além do Protheus, a ASR atende o TOTVS RM, muito usado em RH, folha de pagamento e educação.</p><a class="btn btn--ciano" href="https://wa.me/5511979967825?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener">Falar com um consultor</a>` },
     { tipo: 'cards', escuro: true, olho: 'Módulos', titulo: 'Todos os módulos do Protheus e do RM.', intro: 'Consultores especialistas em cada área do Protheus e do RM.',
       itens: [
         ['Recursos humanos', 'Folha, ponto, eSocial, benefícios e App Meu RH.'],
@@ -243,16 +233,16 @@ ${lista(['Suporte N1 e N2 em todos os módulos TOTVS', 'Atendimento por consulto
 {
   slug: 'atualizacao-protheus', menu: 'Atualização do Protheus', servico: 'Atualização de release do TOTVS Protheus',
   titulo: 'Atualização do Protheus: troca de release sem parar a operação | ASR Consult',
-  descricao: 'Atualização de release e de ambiente do TOTVS Protheus com inventário de customizações, testes em homologação e virada em janela combinada. Projetos de release na Würth e na Emplas.',
+  descricao: 'Atualização de release e de ambiente do TOTVS Protheus com inventário de customizações, testes em homologação e virada em janela combinada. Projeto de release na Würth.',
   olho: 'Atualização do Protheus',
   h1: 'Atualização do Protheus <em>testada antes da virada.</em>',
   apoio: 'Troca de release e atualização de ambiente com inventário das customizações, testes em homologação e virada em data combinada, para a operação não parar.',
-  fatos: [['Projetos de release', 'Würth e Emplas'], ['Ambiente de teste', 'Homologação antes da produção'], ['Virada', 'Janela combinada'], ['Depois', 'Acompanhamento da operação']],
+  fatos: [['Projeto de release', 'Würth'], ['Ambiente de teste', 'Homologação antes da produção'], ['Virada', 'Janela combinada'], ['Depois', 'Acompanhamento da operação']],
   blocos: [
     { tipo: 'texto', olho: 'Por que atualizar', titulo: 'Release antiga fica sem as mudanças da lei.',
       html: `<p>A TOTVS publica novas releases do Protheus com correções, melhorias e, principalmente, as mudanças da legislação. Quando a empresa fica numa release antiga, essas atualizações deixam de chegar, e cada exigência nova vira um ajuste manual ou um desenvolvimento à parte.</p>
 <p>Com a reforma tributária, isso ficou mais urgente, porque as regras de CBS e IBS, o Configurador de Tributos e os novos campos das notas fiscais chegam pelas atualizações do sistema. Empresas desatualizadas precisam primeiro trocar de release para depois se adequar.</p>
-${lista(['Atualizações legais: reforma tributária, eSocial, REINF e layouts de NF-e e NFS-e', 'Correções de segurança e de erros conhecidos', 'Ganho de desempenho, como no projeto de release e SQL da Emplas', 'Acesso às funções novas do Protheus'])}`,
+${lista(['Atualizações legais: reforma tributária, eSocial, REINF e layouts de NF-e e NFS-e', 'Correções de segurança e de erros conhecidos', 'Ganho de desempenho com banco de dados e rotinas revisados', 'Acesso às funções novas do Protheus'])}`,
       lado: `<h3>O risco das customizações</h3><p>Rotinas em ADVPL feitas fora do padrão costumam quebrar na troca de release. Por isso o inventário das customizações é o primeiro passo do projeto.</p><a class="btn btn--ciano" href="#contato">Avaliar meu ambiente</a>` },
     { tipo: 'passos', olho: 'Como fazemos', titulo: 'Atualização em cinco etapas.',
       itens: [
@@ -370,7 +360,7 @@ ${lista(['<b>Atualização do sistema</b>, para receber as regras novas da TOTVS
       html: `<p>Todo Protheus tem pontos em que o padrão não atende: uma regra comercial própria, um relatório que a diretoria pede, uma integração com um sistema que só a sua empresa usa. Nesses casos, a ASR desenvolve em ADVPL, a linguagem do Protheus.</p>
 <p>O time técnico da ASR desenvolve dentro das regras da TOTVS, usando pontos de entrada e as estruturas previstas pelo sistema. Assim a customização continua funcionando quando o Protheus é atualizado.</p>
 ${lista(['Rotinas e telas novas no Protheus', 'Relatórios e consultas sob medida', 'Integrações com outros sistemas', 'Automação de processos repetitivos', 'Revisão e correção de customizações antigas', 'Entregas rápidas e documentadas'])}`,
-      lado: `<h3>Cases</h3><p>Automação de processos de RH na Würth e automação do App Meu RH na Avacy.</p><a class="btn btn--ciano" href="#contato">Pedir uma estimativa</a>` },
+      lado: `<h3>Case Würth</h3><p>Automação de processos de RH com soluções TOTVS, dentro de um projeto que também envolveu estoque, ACD e eSocial.</p><a class="btn btn--ciano" href="#contato">Pedir uma estimativa</a>` },
     { tipo: 'passos', olho: 'Como funciona', titulo: 'Da especificação à entrega documentada.',
       itens: [
         ['Especificação', 'O consultor funcional descreve a regra com a área e confirma se o padrão já resolve.'],
@@ -396,12 +386,12 @@ ${lista(['Rotinas e telas novas no Protheus', 'Relatórios e consultas sob medid
   olho: 'Integração de sistemas',
   h1: 'O Protheus integrado <em>ao resto da empresa.</em>',
   apoio: 'Bancos, ponto eletrônico, saúde ocupacional, coletores no estoque e outros sistemas trocando dados com o Protheus, sem digitação dupla.',
-  fatos: [['Financeiro', 'DDA e PIX'], ['RH', 'e-Ponto e SOC'], ['Estoque', 'ACD Indústria 4.0'], ['Case', 'Integração Sênior na Iguá']],
+  fatos: [['Financeiro', 'DDA e PIX'], ['RH', 'e-Ponto e SOC'], ['Estoque', 'ACD Indústria 4.0'], ['Outros sistemas', 'RH, logística e vendas']],
   blocos: [
     { tipo: 'texto', olho: 'Por que integrar', titulo: 'Onde a digitação dupla gera erro.',
       html: `<p>Quando o boleto do fornecedor é digitado de novo no financeiro, quando a batida de ponto é exportada em planilha para a folha ou quando o estoque é contado no papel, o erro aparece no fechamento. A integração tira essas passagens manuais do caminho.</p>
 <p>A ASR integra o Protheus usando as ferramentas previstas pela TOTVS, como APIs e rotinas em ADVPL, e documenta cada integração para que ela continue funcionando nas próximas atualizações.</p>`,
-      lado: `<h3>Case Iguá</h3><p>Implantação do eSocial, projeto de estoque com ACD e integração do Protheus com o sistema Sênior. Mais de 3 mil chamados atendidos.</p><a class="btn btn--ciano" href="#contato">Falar sobre integração</a>` },
+      lado: `<h3>Integração com outros ERPs</h3><p>A ASR também conecta o Protheus a sistemas de RH, logística e vendas de outros fabricantes, sem digitação dupla entre eles.</p><a class="btn btn--ciano" href="#contato">Falar sobre integração</a>` },
     { tipo: 'cards', escuro: true, olho: 'Integrações', titulo: 'O que já conectamos ao Protheus.', intro: 'Integrações que a ASR implanta e mantém.',
       itens: [
         ['DDA entre bancos', 'Boletos de fornecedores entrando direto no contas a pagar.'],
@@ -410,7 +400,7 @@ ${lista(['Rotinas e telas novas no Protheus', 'Relatórios e consultas sob medid
         ['Protheus e SOC', 'Saúde ocupacional e segurança do trabalho integradas ao RH.'],
         ['ACD Indústria 4.0', 'Coletores de dados no chão de fábrica e no estoque.'],
         ['Power BI', 'Painéis de gestão lendo os dados do ERP.'],
-        ['Outros ERPs e sistemas', 'Troca de dados com sistemas de RH, logística e vendas, como a integração com o Sênior na Iguá.'],
+        ['Outros ERPs e sistemas', 'Troca de dados com sistemas de RH, logística e vendas de outros fabricantes.'],
         ['GFE, WMS e TMS', 'Frete, armazém e transporte conectados ao faturamento.'],
         ['App Meu RH', 'Portal do colaborador ligado ao RH do Protheus.'],
       ] },
@@ -499,7 +489,7 @@ ${lista(['Indicadores atualizados sem exportar planilha', 'Menos risco de vazame
     { tipo: 'texto', olho: 'Quando usar', titulo: 'Para entregas com começo, meio e fim.',
       html: `<p>O projeto de horas fechadas funciona para demandas com escopo claro: implantar um módulo, trocar a release, integrar um sistema, adequar o Protheus a uma obrigação legal. A ASR levanta o que precisa ser feito, estima as horas e fecha o valor antes de começar.</p>
 ${lista(['Implantação de módulos: eSocial, App Meu RH, ACD, NFS-e, REINF, WMS', 'Projetos de release e atualização de ambiente', 'Adequação à reforma tributária', 'Integrações com outros sistemas', 'Desenvolvimentos em ADVPL'])}`,
-      lado: `<h3>Exemplos reais</h3><p>Reestruturação de estoque, ACD e eSocial na Würth. Projetos de release, SQL, estoque e financeiro na Emplas.</p><a class="btn btn--ciano" href="#contato">Pedir uma proposta</a>` },
+      lado: `<h3>Exemplo real</h3><p>Reestruturação de estoque, ACD, eSocial e projeto de release na Würth.</p><a class="btn btn--ciano" href="#contato">Pedir uma proposta</a>` },
     { tipo: 'html', html: `<section class="secao claro" aria-labelledby="t-modelos" style="padding-top:0">
   <div class="wrap">
     <div class="secao__cabeca">
