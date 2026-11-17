@@ -1,6 +1,6 @@
 # ASR Consult
 
-> Consultoria homologada TOTVS desde 2008, com sede em São Paulo (Rua da Mooca, 4415). Implantação, suporte e sustentação com SLA mínimo de 85% em contrato, atualização de release, reforma tributária, desenvolvimento ADVPL, integrações, Power BI e treinamento em TOTVS Protheus e RM. Mais de 480 projetos entregues, mais de 35 mil atendimentos por ano, mais de 40 consultores sêniores e clientes em 11 estados.
+> Consultoria homologada TOTVS desde 2008, com sede em São Paulo (Rua da Mooca, 4415). Implantação, suporte e sustentação com SLA mínimo de 85% em contrato, atualização de release, reforma tributária, desenvolvimento ADVPL, integrações, Power BI e treinamento em TOTVS Protheus e RM. Mais de 2.000 projetos entregues, mais de 35 mil atendimentos por ano, mais de 40 consultores sêniores e clientes em 11 estados.
 
 Contato comercial: (11) 97996-7825 · Suporte: (11) 2659-5360 · rodrigo.silvestre@asrconsult.com.br
 
@@ -10,7 +10,7 @@ Contato comercial: (11) 97996-7825 · Suporte: (11) 2659-5360 · rodrigo.silvest
 - [Quem somos](https://www.asrconsult.com.br/quem-somos.html): história, Rodrigo Silvestre, modelo de trabalho e cases
 - [Serviços](https://www.asrconsult.com.br/servicos.html): índice de todos os serviços
 - [Consultoria TOTVS Protheus](https://www.asrconsult.com.br/consultoria-totvs-protheus.html): Consultoria ERP TOTVS Protheus e RM com especialistas por módulo: fiscal, financeiro, RH, estoque, compras e logística. Canal homologado TOTVS desde 2008.
-- [Implantação](https://www.asrconsult.com.br/implantacao-protheus.html): Implantação do TOTVS Protheus com planejamento, cronograma e treinamento via Universidade TOTVS. Consultoria homologada com +480 projetos entregues desde 2008.
+- [Implantação](https://www.asrconsult.com.br/implantacao-protheus.html): Implantação do TOTVS Protheus com planejamento, cronograma e treinamento via Universidade TOTVS. Consultoria homologada com +2.000 projetos entregues desde 2008.
 - [Sustentação N1 e N2](https://www.asrconsult.com.br/suporte-protheus.html): Sustentação TOTVS Protheus com suporte N1 e N2, SLA mínimo de 85% garantido em contrato, banco de horas AMS e Book de Atendimento mensal. +35 mil atendimentos por ano.
 - [Atualização do Protheus](https://www.asrconsult.com.br/atualizacao-protheus.html): Atualização de release e de ambiente do TOTVS Protheus com inventário de customizações, testes em homologação e virada em janela combinada. Projeto de release na Würth.
 - [Reforma tributária](https://www.asrconsult.com.br/reforma-tributaria-protheus.html): Adequação do TOTVS Protheus à reforma tributária: atualização, Configurador de Tributos, cadastros, NF-e e NFS-e com CBS e IBS. Calendário da transição de 2026 a 2033.

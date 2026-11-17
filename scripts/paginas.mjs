@@ -276,7 +276,7 @@ ${cabecalho}
       <h1 id="titulo">${p.h1}</h1>
       <p class="hero__apoio">${p.apoio}</p>
       <div class="hero__acoes">
-        <a class="btn btn--ciano" href="https://wa.me/5511979967825?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener">Falar com um especialista ${seta}</a>
+        <a class="btn btn--ciano" href="https://wa.me/5511940338579?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener">Falar com um especialista ${seta}</a>
         <a class="btn btn--linha" href="https://wa.me/5511979967825?text=Ol%C3%A1%2C%20vim%20pelo%20site." target="_blank" rel="noopener">Chamar no WhatsApp</a>
       </div>
     </div>
@@ -291,7 +291,7 @@ ${p.semContato ? '' : contato}
 
 ${rodape}
 
-${flutuantes}${script}
+${p.semContato ? flutuantes.replace('class="contato-flutuante" href="#contato"', 'class="contato-flutuante" href="index.html#contato"') : flutuantes}${script}
 </body>
 </html>
 `;
@@ -345,7 +345,7 @@ Disallow: /
 `);
 writeFileSync('llms.txt', `# ASR Consult
 
-> Consultoria homologada TOTVS desde 2008, com sede em São Paulo (Rua da Mooca, 4415). Implantação, suporte e sustentação com SLA mínimo de 85% em contrato, atualização de release, reforma tributária, desenvolvimento ADVPL, integrações, Power BI e treinamento em TOTVS Protheus e RM. Mais de 480 projetos entregues, mais de 35 mil atendimentos por ano, mais de 40 consultores sêniores e clientes em 11 estados.
+> Consultoria homologada TOTVS desde 2008, com sede em São Paulo (Rua da Mooca, 4415). Implantação, suporte e sustentação com SLA mínimo de 85% em contrato, atualização de release, reforma tributária, desenvolvimento ADVPL, integrações, Power BI e treinamento em TOTVS Protheus e RM. Mais de 2.000 projetos entregues, mais de 35 mil atendimentos por ano, mais de 40 consultores sêniores e clientes em 11 estados.
 
 Contato comercial: (11) 97996-7825 · Suporte: (11) 2659-5360 · rodrigo.silvestre@asrconsult.com.br
 

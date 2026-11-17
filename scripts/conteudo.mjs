@@ -15,18 +15,18 @@ export const paginas = [
 {
   slug: 'quem-somos', menu: 'Quem somos',
   titulo: 'Quem somos | ASR Consult, consultoria homologada TOTVS desde 2008',
-  descricao: 'A ASR Consult é canal homologado TOTVS desde 2008: +480 projetos, +40 consultores sêniores e clientes em 11 estados. Conheça a história e quem lidera a consultoria.',
+  descricao: 'A ASR Consult é canal homologado TOTVS desde 2008: +2.000 projetos, +40 consultores sêniores e clientes em 11 estados. Conheça a história e quem lidera a consultoria.',
   olho: 'Quem somos',
   h1: 'Desde 2008 cuidando do <em>Protheus de empresas em 11 estados.</em>',
-  apoio: 'A ASR Consult é uma consultoria homologada TOTVS com sede na Mooca, em São Paulo. São mais de 480 projetos entregues e 35 mil atendimentos por ano, feitos por uma equipe só de consultores sêniores.',
+  apoio: 'A ASR Consult é uma consultoria homologada TOTVS com sede na Mooca, em São Paulo. São mais de 2.000 projetos entregues e 35 mil atendimentos por ano, feitos por uma equipe só de consultores sêniores.',
   fatos: [['Fundação', '2008'], ['Sede', 'Mooca, São Paulo'], ['Equipe', '+40 consultores sêniores'], ['Presença', '11 estados']],
   blocos: [
-    { tipo: 'numeros', itens: [['480', '+', 'Projetos entregues desde 2008'], ['35000', '+', 'Atendimentos por ano'], ['40', '+', 'Consultores sêniores'], ['11', '', 'Estados atendidos']] },
+    { tipo: 'numeros', itens: [['2000', '+', 'Projetos entregues desde 2008'], ['35000', '+', 'Atendimentos por ano'], ['40', '+', 'Consultores sêniores'], ['11', '', 'Estados atendidos']] },
     { tipo: 'texto', olho: 'Nossa história', titulo: 'Uma consultoria criada para cuidar do ERP depois que ele entra no ar.',
       html: `<p>A ASR começou em 2008 implantando TOTVS Protheus e, com os anos, passou a cuidar do que vem depois da implantação: o suporte do dia a dia, as atualizações de release, as mudanças da legislação e o desenvolvimento do que o sistema padrão não cobre.</p>
 <p>Hoje a ASR atende indústrias, distribuidores, redes de varejo e empresas de serviço em 11 estados. A equipe tem mais de 40 consultores, todos sêniores, com especialistas em cada módulo do Protheus e do RM.</p>
 <p>O modelo de trabalho tem três compromissos que o cliente consegue conferir: o SLA de sustentação escrito em contrato, com mínimo de 85% todo mês; o Book de Atendimento, um relatório mensal com as causas dos chamados e os planos de ação; e a documentação no padrão TOTVS em toda entrega.</p>`,
-      lado: `<h3>Em números</h3><dl class="fatos-lista"><div><dt>Projetos entregues desde 2008</dt><dd>+480</dd></div><div><dt>Atendimentos por ano</dt><dd>+35 mil</dd></div><div><dt>Consultores sêniores</dt><dd>+40</dd></div></dl><a class="btn btn--ciano" href="#clientes">Ver clientes</a>` },
+      lado: `<h3>Em números</h3><dl class="fatos-lista"><div><dt>Projetos entregues desde 2008</dt><dd>+2.000</dd></div><div><dt>Atendimentos por ano</dt><dd>+35 mil</dd></div><div><dt>Consultores sêniores</dt><dd>+40</dd></div></dl><a class="btn btn--ciano" href="#clientes">Ver clientes</a>` },
     { tipo: 'html', html: `<section class="secao escuro" id="rodrigo" aria-labelledby="t-rodrigo">
   <div class="wrap pessoa">
     <figure class="pessoa__foto">
@@ -111,7 +111,7 @@ export const paginas = [
       html: `<p>Quem procura consultoria Protheus quase sempre já tem o sistema rodando. O problema aparece no dia a dia: o fechamento do mês leva dias, o fiscal ajusta nota na mão, o estoque do sistema não bate com o físico, ou cada área usa o ERP de um jeito.</p>
 <p>A consultoria da ASR começa olhando o processo e só depois o sistema. O consultor do módulo senta com a área, entende como o trabalho é feito, compara com o que o Protheus já oferece e propõe o ajuste: um parâmetro, um cadastro corrigido, um treinamento ou, quando o padrão não atende, um desenvolvimento em ADVPL.</p>
 ${lista(['Revisão de processos por área, com o usuário-chave junto', 'Ajuste de parâmetros e cadastros que geram retrabalho', 'Plano de ação priorizado, com prazo e responsável', 'Documentação no padrão TOTVS do que foi alterado'])}`,
-      lado: `<h3>Também atendemos RM</h3><p>Além do Protheus, a ASR atende o TOTVS RM, muito usado em RH, folha de pagamento e educação.</p><a class="btn btn--ciano" href="https://wa.me/5511979967825?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener">Falar com um consultor</a>` },
+      lado: `<h3>Também atendemos RM</h3><p>Além do Protheus, a ASR atende o TOTVS RM, muito usado em RH, folha de pagamento e educação.</p><a class="btn btn--ciano" href="https://wa.me/5511940338579?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener">Falar com um consultor</a>` },
     { tipo: 'cards', escuro: true, olho: 'Módulos', titulo: 'Todos os módulos do Protheus e do RM.', intro: 'Consultores especialistas em cada área do Protheus e do RM.',
       itens: [
         ['Recursos humanos', 'Folha, ponto, eSocial, benefícios e App Meu RH.'],
@@ -144,11 +144,11 @@ ${lista(['Revisão de processos por área, com o usuário-chave junto', 'Ajuste 
 {
   slug: 'implantacao-protheus', menu: 'Implantação', servico: 'Implantação do TOTVS Protheus',
   titulo: 'Implantação do TOTVS Protheus com treinamento | ASR Consult',
-  descricao: 'Implantação do TOTVS Protheus com planejamento, cronograma e treinamento via Universidade TOTVS. Consultoria homologada com +480 projetos entregues desde 2008.',
+  descricao: 'Implantação do TOTVS Protheus com planejamento, cronograma e treinamento via Universidade TOTVS. Consultoria homologada com +2.000 projetos entregues desde 2008.',
   olho: 'Implantação Protheus',
   h1: 'Implantação do Protheus com <em>cronograma e equipe treinada.</em>',
   apoio: 'Planejamento por fase, cronograma com marcos e treinamento pela Universidade TOTVS ou no formato da sua empresa, para o ERP entrar no ar e ser usado.',
-  fatos: [['Projetos entregues', '+480'], ['Treinamento', 'Universidade TOTVS'], ['Modelo', 'Horas fechadas'], ['Documentação', 'Padrão TOTVS']],
+  fatos: [['Projetos entregues', '+2.000'], ['Treinamento', 'Universidade TOTVS'], ['Modelo', 'Horas fechadas'], ['Documentação', 'Padrão TOTVS']],
   blocos: [
     { tipo: 'texto', olho: 'O que entregamos', titulo: 'Uma implantação termina quando a equipe usa o sistema sozinha.',
       html: `<p>O Protheus entra no ar no dia da virada, mas a implantação só dá certo quando as pessoas usam o sistema sem voltar para a planilha. Por isso a ASR trata o treinamento como parte do projeto, com a mesma importância da configuração.</p>
@@ -323,7 +323,7 @@ ${lista(['<b>Atualização do sistema</b>, para receber as regras novas da TOTVS
     { tipo: 'texto', olho: 'Sobre a TOTVS', titulo: 'A maior fabricante brasileira de software de gestão.',
       html: `<p>A TOTVS nasceu em 1983 como Microsiga e hoje é a maior fabricante brasileira de software de gestão. Entre os sistemas dela estão o Protheus, usado por indústrias, distribuidores e empresas de serviço, o RM, forte em RH e educação, e plataformas como o Fluig.</p>
 <p>Boa parte da implantação e do suporte desses sistemas é feita por parceiros. Parte deles passa pela homologação da TOTVS e se torna canal oficial; outros trabalham por conta própria, sem vínculo com a fabricante.</p>`,
-      lado: `<h3>ASR Consult</h3><p>Canal homologado TOTVS desde 2008, com +480 projetos entregues e +40 consultores sêniores.</p><a class="btn btn--ciano" href="quem-somos.html">Conhecer a ASR</a>` },
+      lado: `<h3>ASR Consult</h3><p>Canal homologado TOTVS desde 2008, com +2.000 projetos entregues e +40 consultores sêniores.</p><a class="btn btn--ciano" href="quem-somos.html">Conhecer a ASR</a>` },
     { tipo: 'cards', escuro: true, olho: 'O que muda', titulo: 'O que o cliente ganha com um canal homologado.', intro: 'O que muda no dia a dia do ERP.',
       itens: [
         ['Metodologia TOTVS', 'Implantação e suporte seguem as boas práticas da fabricante, e não um jeito próprio de cada consultor.'],
