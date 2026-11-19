@@ -30,7 +30,7 @@ export const paginas = [
     { tipo: 'html', html: `<section class="secao escuro" id="rodrigo" aria-labelledby="t-rodrigo">
   <div class="wrap pessoa">
     <figure class="pessoa__foto">
-      <img src="assets/img/rodrigo-silvestre-720.webp" srcset="assets/img/rodrigo-silvestre-420.webp 420w, assets/img/rodrigo-silvestre-720.webp 720w" sizes="(min-width: 1000px) 420px, 92vw" width="720" height="900" alt="Rodrigo Silvestre, diretor executivo da ASR Consult" loading="lazy" decoding="async">
+      <img src="assets/img/rodrigo-silvestre-720.webp?v=2" srcset="assets/img/rodrigo-silvestre-420.webp?v=2 420w, assets/img/rodrigo-silvestre-720.webp?v=2 720w" sizes="(min-width: 1000px) 420px, 92vw" width="720" height="900" alt="Rodrigo Silvestre, diretor executivo da ASR Consult" loading="lazy" decoding="async">
       <figcaption class="mono">Rodrigo Silvestre · ASR Consult</figcaption>
     </figure>
     <div>
